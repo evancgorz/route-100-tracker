@@ -1,0 +1,9 @@
+{
+  "private": true,
+  "dependencies": {
+    "@clack/prompts": "1.7.0",
+    "@openai/create-sites": "0.2.0",
+    "commander": "14.0.3",
+    "tinyexec": "1.2.2"
+  }
+}

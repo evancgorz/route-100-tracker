@@ -13,8 +13,10 @@ const TARGETS = new Map([
 ]);
 
 const scriptDirectory = dirname(fileURLToPath(import.meta.url));
-const databasePath = process.env.ROUTE100_DB_PATH || resolve(scriptDirectory, '..', '..', 'work', 'route100-history.sqlite');
-const logPath = process.env.ROUTE100_LOG_PATH || resolve(scriptDirectory, '..', '..', 'work', 'route100-collector.log');
+// Keep operational data with the repository by default, so a clone is
+// self-contained. Environment variables still allow an alternate location.
+const databasePath = process.env.ROUTE100_DB_PATH || resolve(scriptDirectory, '..', 'work', 'route100-history.sqlite');
+const logPath = process.env.ROUTE100_LOG_PATH || resolve(scriptDirectory, '..', 'work', 'route100-collector.log');
 mkdirSync(dirname(databasePath), { recursive: true });
 mkdirSync(dirname(logPath), { recursive: true });
 
