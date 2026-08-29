@@ -1,0 +1,43 @@
+@import 'tailwindcss';
+
+:root { --ink:#17201d; --muted:#65706b; --paper:#f3f0e8; --card:#fffdf8; --red:#9f1f2d; }
+* { box-sizing:border-box; }
+body { margin:0; background:var(--paper); color:var(--ink); font-family:var(--font-geist-sans),Arial,sans-serif; }
+button { font:inherit; }
+.app-shell { width:min(100%,520px); min-height:100dvh; margin:0 auto; padding:0 22px 28px; background:radial-gradient(circle at 90% 4%,rgba(183,217,200,.55),transparent 28%),var(--paper); }
+.topbar { display:grid; grid-template-columns:auto 1fr auto; align-items:center; gap:12px; padding:22px 0 18px; border-bottom:1px solid rgba(23,32,29,.12); }
+.brand-mark { display:grid; place-items:center; width:46px; height:46px; border-radius:14px; background:var(--red); color:white; font-size:15px; font-weight:800; letter-spacing:-.03em; }
+.brand,.brand-subtitle,.eyebrow,.platform,.card-label,.destination { margin:0; }
+.brand { font-size:14px; font-weight:750; }
+.brand-subtitle { margin-top:2px; color:var(--muted); font-size:12px; }
+.status-pill { display:flex; align-items:center; gap:6px; color:var(--muted); font-size:11px; font-weight:650; }
+.status-pill span { width:7px; height:7px; border-radius:50%; background:#d19446; }
+.status-pill.online span { background:#25845d; box-shadow:0 0 0 4px rgba(37,132,93,.12); }
+.status-pill.offline span { background:var(--red); }
+.hero { padding-top:24px; }
+.direction-switch { display:grid; grid-template-columns:1fr 1fr; gap:4px; padding:4px; border-radius:14px; background:rgba(23,32,29,.07); }
+.direction-switch button { min-height:44px; border:0; border-radius:11px; background:transparent; color:var(--muted); cursor:pointer; font-size:13px; font-weight:700; }
+.direction-switch button.active { background:var(--card); color:var(--ink); box-shadow:0 3px 12px rgba(23,32,29,.08); }
+.eyebrow { margin-top:38px; color:var(--red); font-size:11px; font-weight:800; letter-spacing:.12em; text-transform:uppercase; }
+h1 { margin:8px 0 7px; font-size:clamp(30px,9vw,46px); line-height:.98; letter-spacing:-.055em; }
+.platform { color:var(--muted); font-size:13px; }
+.route-line { display:flex; align-items:center; margin:34px 4px 28px; }
+.line { height:2px; flex:1; background:rgba(23,32,29,.22); }
+.stop-dot { width:13px; height:13px; border:3px solid var(--ink); border-radius:50%; background:var(--paper); }
+.stop-dot.start { background:var(--ink); }
+.bus-dot { display:grid; place-items:center; width:42px; height:29px; border-radius:9px; background:var(--red); color:white; font-size:10px; font-weight:850; }
+.arrival-card { padding:24px; border:1px solid rgba(23,32,29,.12); border-radius:25px; background:var(--card); box-shadow:0 20px 60px rgba(40,48,43,.09); }
+.card-heading { display:flex; align-items:center; justify-content:space-between; gap:16px; }
+.card-label { color:var(--muted); font-size:12px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; }
+.due { padding:6px 9px; border-radius:999px; background:rgba(183,217,200,.55); color:#245f49; font-size:11px; font-weight:800; }
+.arrival-time { display:flex; align-items:baseline; gap:10px; margin-top:6px; }
+.arrival-time strong { font-size:clamp(64px,20vw,94px); line-height:.95; letter-spacing:-.075em; }
+.arrival-time>span { font-size:18px; font-weight:750; }
+.destination { margin-top:6px; font-size:16px; font-weight:650; }
+.confidence-row { display:flex; justify-content:space-between; gap:16px; margin-top:24px; padding-top:17px; border-top:1px solid rgba(23,32,29,.1); color:var(--muted); font-size:11px; }
+.confidence-row .pending { color:#9a672d; font-weight:700; }
+.confidence-row .live-note { color:#247454; font-weight:750; }
+.later-row { display:flex; align-items:center; justify-content:space-between; margin-top:12px; padding:15px 18px; border:1px solid rgba(23,32,29,.09); border-radius:16px; color:var(--muted); font-size:12px; }
+.later-row strong { color:var(--ink); font-size:13px; }
+footer { display:flex; justify-content:space-between; gap:16px; padding:19px 2px 0; color:var(--muted); font-size:10px; }
+@media (min-width:700px) { body { padding:28px; } .app-shell { min-height:calc(100dvh - 56px); border-radius:34px; box-shadow:0 28px 80px rgba(23,32,29,.13); } }
