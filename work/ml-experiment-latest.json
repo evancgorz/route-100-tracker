@@ -1,0 +1,364 @@
+{
+  "generatedAt": "2026-09-01T14:32:53.706Z",
+  "databasePath": "C:\\Users\\Evan Gorczynski\\Documents\\Codex\\2026-08-26\\i-x20-2\\route-100-tracker\\work\\route100-history.sqlite",
+  "method": {
+    "target": "Terminal prediction = median of each trip's final three live predicted times",
+    "split": "Time-ordered holdout: latest complete collection day per direction is test; earlier days are train",
+    "model": "Ridge regression predicting terminal offset from schedule time, first live offset, and vehicle availability",
+    "interval": "Empirical 80% prediction interval from training residuals (10th–90th percentiles)",
+    "minimumTripSamples": 3
+  },
+  "data": {
+    "records": 105,
+    "directions": [
+      {
+        "direction": 1,
+        "trainN": 37,
+        "testN": 12,
+        "trainDays": [
+          "2026-08-27",
+          "2026-08-28",
+          "2026-08-29",
+          "2026-08-30"
+        ],
+        "testDay": "2026-08-31"
+      },
+      {
+        "direction": 0,
+        "trainN": 41,
+        "testN": 15,
+        "trainDays": [
+          "2026-08-26",
+          "2026-08-27",
+          "2026-08-29",
+          "2026-08-30"
+        ],
+        "testDay": "2026-08-31"
+      }
+    ]
+  },
+  "results": [
+    {
+      "direction": 1,
+      "label": "Meredith → RTC arrival",
+      "trainDays": [
+        "2026-08-27",
+        "2026-08-28",
+        "2026-08-29",
+        "2026-08-30"
+      ],
+      "testDay": "2026-08-31",
+      "trainN": 37,
+      "testN": 12,
+      "trainingResidualP10Min": -1.0898063689456816,
+      "trainingResidualP90Min": 1.671932188214448,
+      "methods": {
+        "schedule": {
+          "n": 12,
+          "maeMin": 3.3263888888888906,
+          "rmseMin": 4.047893256351356,
+          "biasMin": -3.3263888888888906,
+          "medianAbsoluteErrorMin": 2.2000000000000455,
+          "p90AbsoluteErrorMin": 6.158333333333331,
+          "within2MinPct": 0.3333333333333333,
+          "within5MinPct": 0.75,
+          "within10MinPct": 1
+        },
+        "firstLivePrediction": {
+          "n": 12,
+          "maeMin": 1.0958333333333314,
+          "rmseMin": 2.015547209954541,
+          "biasMin": -0.42638888888888954,
+          "medianAbsoluteErrorMin": 0,
+          "p90AbsoluteErrorMin": 3.971666666666653,
+          "within2MinPct": 0.75,
+          "within5MinPct": 1,
+          "within10MinPct": 1
+        },
+        "ridgeModel": {
+          "n": 12,
+          "maeMin": 1.3858846937644822,
+          "rmseMin": 2.8513051350267573,
+          "biasMin": 0.2582073028695662,
+          "medianAbsoluteErrorMin": 0.21525182142069132,
+          "p90AbsoluteErrorMin": 2.9562325179716273,
+          "within2MinPct": 0.75,
+          "within5MinPct": 0.9166666666666666,
+          "within10MinPct": 1,
+          "interval80CoveragePct": 0.75
+        }
+      },
+      "predictions": [
+        {
+          "scheduled": "07:02",
+          "estimate": "07:09",
+          "interval80": "07:08–07:11",
+          "terminalEstimate": "07:11",
+          "samples": 32,
+          "vehiclePct": 1
+        },
+        {
+          "scheduled": "07:17",
+          "estimate": "07:31",
+          "interval80": "07:30–07:33",
+          "terminalEstimate": "07:22",
+          "samples": 43,
+          "vehiclePct": 1
+        },
+        {
+          "scheduled": "07:32",
+          "estimate": "07:35",
+          "interval80": "07:34–07:37",
+          "terminalEstimate": "07:38",
+          "samples": 59,
+          "vehiclePct": 1
+        },
+        {
+          "scheduled": "07:47",
+          "estimate": "07:50",
+          "interval80": "07:49–07:52",
+          "terminalEstimate": "07:51",
+          "samples": 59,
+          "vehiclePct": 1
+        },
+        {
+          "scheduled": "07:59",
+          "estimate": "07:59",
+          "interval80": "07:58–08:01",
+          "terminalEstimate": "08:00",
+          "samples": 54,
+          "vehiclePct": 1
+        },
+        {
+          "scheduled": "08:29",
+          "estimate": "08:31",
+          "interval80": "08:30–08:33",
+          "terminalEstimate": "08:31",
+          "samples": 61,
+          "vehiclePct": 1
+        },
+        {
+          "scheduled": "08:44",
+          "estimate": "08:46",
+          "interval80": "08:45–08:48",
+          "terminalEstimate": "08:46",
+          "samples": 61,
+          "vehiclePct": 1
+        },
+        {
+          "scheduled": "08:59",
+          "estimate": "09:01",
+          "interval80": "09:00–09:03",
+          "terminalEstimate": "09:01",
+          "samples": 61,
+          "vehiclePct": 1
+        },
+        {
+          "scheduled": "09:14",
+          "estimate": "09:17",
+          "interval80": "09:16–09:18",
+          "terminalEstimate": "09:16",
+          "samples": 48,
+          "vehiclePct": 1
+        },
+        {
+          "scheduled": "09:29",
+          "estimate": "09:32",
+          "interval80": "09:31–09:33",
+          "terminalEstimate": "09:31",
+          "samples": 42,
+          "vehiclePct": 1
+        },
+        {
+          "scheduled": "09:59",
+          "estimate": "10:02",
+          "interval80": "10:01–10:03",
+          "terminalEstimate": "10:01",
+          "samples": 17,
+          "vehiclePct": 1
+        },
+        {
+          "scheduled": "10:14",
+          "estimate": "10:17",
+          "interval80": "10:15–10:18",
+          "terminalEstimate": "10:16",
+          "samples": 6,
+          "vehiclePct": 1
+        }
+      ]
+    },
+    {
+      "direction": 0,
+      "label": "RTC → Meredith departure",
+      "trainDays": [
+        "2026-08-26",
+        "2026-08-27",
+        "2026-08-29",
+        "2026-08-30"
+      ],
+      "testDay": "2026-08-31",
+      "trainN": 41,
+      "testN": 15,
+      "trainingResidualP10Min": -2.963804229256801,
+      "trainingResidualP90Min": 2.3297720861781994,
+      "methods": {
+        "schedule": {
+          "n": 15,
+          "maeMin": 3.987777777777781,
+          "rmseMin": 7.521740096152889,
+          "biasMin": -3.987777777777781,
+          "medianAbsoluteErrorMin": 0,
+          "p90AbsoluteErrorMin": 11.673333333333355,
+          "within2MinPct": 0.6666666666666666,
+          "within5MinPct": 0.6666666666666666,
+          "within10MinPct": 0.8666666666666667
+        },
+        "firstLivePrediction": {
+          "n": 15,
+          "maeMin": 3.987777777777781,
+          "rmseMin": 7.521740096152889,
+          "biasMin": -3.987777777777781,
+          "medianAbsoluteErrorMin": 0,
+          "p90AbsoluteErrorMin": 11.673333333333355,
+          "within2MinPct": 0.6666666666666666,
+          "within5MinPct": 0.6666666666666666,
+          "within10MinPct": 0.8666666666666667
+        },
+        "ridgeModel": {
+          "n": 15,
+          "maeMin": 3.5204454489964316,
+          "rmseMin": 5.820415997096523,
+          "biasMin": -2.165601948908216,
+          "medianAbsoluteErrorMin": 1.995136559330728,
+          "p90AbsoluteErrorMin": 7.575674893337518,
+          "within2MinPct": 0.5333333333333333,
+          "within5MinPct": 0.8666666666666667,
+          "within10MinPct": 0.9333333333333333,
+          "interval80CoveragePct": 0.6666666666666666
+        }
+      },
+      "predictions": [
+        {
+          "scheduled": "15:00",
+          "estimate": "15:05",
+          "interval80": "15:02–15:08",
+          "terminalEstimate": "15:07",
+          "samples": 12,
+          "vehiclePct": 1
+        },
+        {
+          "scheduled": "15:15",
+          "estimate": "15:20",
+          "interval80": "15:17–15:22",
+          "terminalEstimate": "15:16",
+          "samples": 22,
+          "vehiclePct": 1
+        },
+        {
+          "scheduled": "15:30",
+          "estimate": "15:34",
+          "interval80": "15:31–15:37",
+          "terminalEstimate": "15:39",
+          "samples": 43,
+          "vehiclePct": 1
+        },
+        {
+          "scheduled": "15:45",
+          "estimate": "15:49",
+          "interval80": "15:46–15:51",
+          "terminalEstimate": "15:59",
+          "samples": 61,
+          "vehiclePct": 1
+        },
+        {
+          "scheduled": "16:00",
+          "estimate": "16:03",
+          "interval80": "16:00–16:06",
+          "terminalEstimate": "16:22",
+          "samples": 60,
+          "vehiclePct": 1
+        },
+        {
+          "scheduled": "16:15",
+          "estimate": "16:18",
+          "interval80": "16:15–16:20",
+          "terminalEstimate": "16:22",
+          "samples": 61,
+          "vehiclePct": 1
+        },
+        {
+          "scheduled": "16:30",
+          "estimate": "16:32",
+          "interval80": "16:30–16:35",
+          "terminalEstimate": "16:30",
+          "samples": 60,
+          "vehiclePct": 1
+        },
+        {
+          "scheduled": "16:45",
+          "estimate": "16:46",
+          "interval80": "16:43–16:48",
+          "terminalEstimate": "16:45",
+          "samples": 21,
+          "vehiclePct": 0
+        },
+        {
+          "scheduled": "17:00",
+          "estimate": "17:02",
+          "interval80": "16:59–17:04",
+          "terminalEstimate": "17:00",
+          "samples": 61,
+          "vehiclePct": 1
+        },
+        {
+          "scheduled": "17:15",
+          "estimate": "17:16",
+          "interval80": "17:13–17:18",
+          "terminalEstimate": "17:15",
+          "samples": 60,
+          "vehiclePct": 1
+        },
+        {
+          "scheduled": "17:30",
+          "estimate": "17:31",
+          "interval80": "17:28–17:33",
+          "terminalEstimate": "17:30",
+          "samples": 48,
+          "vehiclePct": 1
+        },
+        {
+          "scheduled": "17:45",
+          "estimate": "17:45",
+          "interval80": "17:42–17:47",
+          "terminalEstimate": "17:45",
+          "samples": 14,
+          "vehiclePct": 1
+        },
+        {
+          "scheduled": "18:00",
+          "estimate": "18:00",
+          "interval80": "17:57–18:02",
+          "terminalEstimate": "18:00",
+          "samples": 15,
+          "vehiclePct": 1
+        },
+        {
+          "scheduled": "18:15",
+          "estimate": "18:13",
+          "interval80": "18:10–18:15",
+          "terminalEstimate": "18:15",
+          "samples": 21,
+          "vehiclePct": 0
+        },
+        {
+          "scheduled": "18:30",
+          "estimate": "18:29",
+          "interval80": "18:26–18:31",
+          "terminalEstimate": "18:30",
+          "samples": 7,
+          "vehiclePct": 1
+        }
+      ]
+    }
+  ]
+}
