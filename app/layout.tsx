@@ -13,19 +13,19 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Route 100 Watch',
-  description: 'Live and learned arrival estimates for GoTriangle Route 100 between Meredith College and RTC.',
+  title: 'Commute, connected',
+  description: 'A weather-aware Bike–Bus–Bike plan for your Route 100 commute.',
   manifest: '/manifest.webmanifest',
-  themeColor: '#9f1f2d',
+  themeColor: '#0b7a5a',
   openGraph: {
-    title: 'Route 100 Watch',
-    description: 'Live Route 100 estimates for Meredith ↔ RTC.',
-    images: [{ url: '/og.png', width: 1200, height: 630, alt: 'Route 100 Watch — Meredith to RTC' }],
+    title: 'Commute, connected',
+    description: 'Weather-aware Bike–Bus–Bike timing for Route 100.',
+    images: [{ url: '/og.png', width: 1200, height: 630, alt: 'Commute, connected — Bike, bus, bike' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Route 100 Watch',
-    description: 'Live Route 100 estimates for Meredith ↔ RTC.',
+    title: 'Commute, connected',
+    description: 'Weather-aware Bike–Bus–Bike timing for Route 100.',
     images: ['/og.png'],
   },
 };
