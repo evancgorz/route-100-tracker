@@ -1,9 +1,9 @@
 {
-  "name": "Route 100 Watch",
-  "short_name": "100 Watch",
-  "description": "Live Route 100 estimates between Meredith College and RTC.",
+  "name": "Commute, connected",
+  "short_name": "Commute",
+  "description": "Weather-aware Bike–Bus–Bike timing for Route 100.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#f3f0e8",
-  "theme_color": "#9f1f2d"
+  "background_color": "#eef3ef",
+  "theme_color": "#0b7a5a"
 }
