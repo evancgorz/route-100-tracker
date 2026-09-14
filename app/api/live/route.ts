@@ -8,6 +8,7 @@ export const dynamic = 'force-dynamic';
 const TRIP_UPDATES_URL = 'https://gotriangle.tripsparkhost.com/gtfs/Realtime/GTFS_TripUpdates.pb';
 const VEHICLE_POSITIONS_URL = 'https://gotriangle.tripsparkhost.com/gtfs/Realtime/GTFS_VehiclePositions.pb';
 const ROUTE_ID = '3629';
+const BROWSE_HISTORY_SECONDS = 3 * 60 * 60;
 
 const targets = {
   outbound: { directionId: 1, stopId: '12228', event: 'arrival' as const },
@@ -149,7 +150,7 @@ export async function GET() {
       if (!stopUpdate) continue;
       const event = stopUpdate[target.event] ?? stopUpdate.arrival ?? stopUpdate.departure;
       const predictedTime = seconds(event?.time);
-      if (!predictedTime || predictedTime < observedAt - 180 || predictedTime > observedAt + 6 * 3600) continue;
+      if (!predictedTime || predictedTime < observedAt - BROWSE_HISTORY_SECONDS || predictedTime > observedAt + 6 * 3600) continue;
       const vehicle = vehicles.get(update.trip.tripId);
       const delaySeconds = event?.delay ?? latestDelayBefore(update.stopTimeUpdate, Number(stopUpdate.stopSequence ?? 0));
       const item = {

@@ -25,6 +25,7 @@ const BUFFER_MINUTES = 8;
 const HOME_MEREDITH_MINUTES = 14;
 const RTC_WORK_MINUTES = 5;
 const UPCOMING_BUFFER_SECONDS = 60;
+const BROWSE_HISTORY_SECONDS = 3 * 60 * 60;
 
 function clock(timestamp?: number) {
   if (!timestamp) return '—';
@@ -40,9 +41,15 @@ function addMinutes(timestamp: number, minutes: number) { return timestamp + min
 function rangeLabel(start: number, end: number) { return clock(start) + '–' + clock(end); }
 function effectiveTime(arrival: Arrival) { return arrival.primaryPredictedTime ?? arrival.predictedTime; }
 
-function upcoming(arrivals: Arrival[] | undefined) {
-  const cutoff = Math.floor(Date.now() / 1000) + UPCOMING_BUFFER_SECONDS;
+function browseTrips(arrivals: Arrival[] | undefined) {
+  const cutoff = Math.floor(Date.now() / 1000) - BROWSE_HISTORY_SECONDS;
   return (arrivals ?? []).filter((arrival) => effectiveTime(arrival) > cutoff);
+}
+
+function nextTripIndex(arrivals: Arrival[]) {
+  const cutoff = Math.floor(Date.now() / 1000) + UPCOMING_BUFFER_SECONDS;
+  const index = arrivals.findIndex((arrival) => effectiveTime(arrival) > cutoff);
+  return index === -1 ? Math.max(0, arrivals.length - 1) : index;
 }
 
 function weatherWindow(samples: WeatherSample[], minTemperature: number, maxTemperature: number) {
@@ -73,7 +80,7 @@ function Leg({ mode, title, times, detail }: { mode: 'bike' | 'bus'; title: stri
 
 function TripPager({ index, count, onPrevious, onNext }: { index: number; count: number; onPrevious: () => void; onNext: () => void }) {
   return <div className="trip-pager">
-    <span>{count > 1 ? 'Trip ' + (index + 1) + ' of ' + count + ' · swipe for later' : count === 1 ? 'Next departure' : 'No upcoming trip in feed'}</span>
+    <span>{count > 1 ? 'Trip ' + (index + 1) + ' of ' + count + ' · swipe to browse' : count === 1 ? 'Next departure' : 'No recent or upcoming trip in feed'}</span>
     {count > 1 && <div className="trip-controls">
       <button type="button" onClick={onPrevious} disabled={index === 0} aria-label="Show previous trip">←</button>
       <button type="button" onClick={onNext} disabled={index === count - 1} aria-label="Show next trip">→</button>
@@ -103,8 +110,8 @@ export default function Home() {
   const [data, setData] = useState<LiveData | null>(null);
   const [weather, setWeather] = useState<WeatherData | null>(null);
   const [error, setError] = useState<string | null>(null);
-  const [outboundIndex, setOutboundIndex] = useState(0);
-  const [returnIndex, setReturnIndex] = useState(0);
+  const [outboundTripId, setOutboundTripId] = useState<string | null>(null);
+  const [returnTripId, setReturnTripId] = useState<string | null>(null);
   const weatherKeyRef = useRef('');
   const morningTouchStart = useRef(0);
   const afternoonTouchStart = useRef(0);
@@ -126,13 +133,16 @@ export default function Home() {
     return () => { active = false; window.clearInterval(timer); };
   }, []);
 
-  const outboundTrips = useMemo(() => upcoming(data?.directions.outbound), [data]);
-  const returnTrips = useMemo(() => upcoming(data?.directions.return), [data]);
+  const outboundTrips = useMemo(() => browseTrips(data?.directions.outbound), [data]);
+  const returnTrips = useMemo(() => browseTrips(data?.directions.return), [data]);
+
+  const outboundIndex = Math.max(0, outboundTripId ? outboundTrips.findIndex((trip) => trip.tripId === outboundTripId) : nextTripIndex(outboundTrips));
+  const returnIndex = Math.max(0, returnTripId ? returnTrips.findIndex((trip) => trip.tripId === returnTripId) : nextTripIndex(returnTrips));
 
   useEffect(() => {
-    setOutboundIndex((index) => Math.min(index, Math.max(0, outboundTrips.length - 1)));
-    setReturnIndex((index) => Math.min(index, Math.max(0, returnTrips.length - 1)));
-  }, [outboundTrips.length, returnTrips.length]);
+    setOutboundTripId((current) => current && outboundTrips.some((trip) => trip.tripId === current) ? current : outboundTrips[nextTripIndex(outboundTrips)]?.tripId ?? null);
+    setReturnTripId((current) => current && returnTrips.some((trip) => trip.tripId === current) ? current : returnTrips[nextTripIndex(returnTrips)]?.tripId ?? null);
+  }, [outboundTrips, returnTrips]);
 
   const plans = useMemo(() => ({
     morning: planForMorning(outboundTrips[outboundIndex]),
@@ -182,6 +192,14 @@ export default function Home() {
     weather?.samples.afternoonMeredithEnd,
   ].filter(Boolean) as WeatherSample[], 45, 90);
   const feedAge = data ? Math.max(0, Math.round(Date.now() / 1000 - data.feedTimestamp)) : null;
+  const setOutboundAt = (index: number) => {
+    const trip = outboundTrips[Math.max(0, Math.min(index, outboundTrips.length - 1))];
+    if (trip) setOutboundTripId(trip.tripId);
+  };
+  const setReturnAt = (index: number) => {
+    const trip = returnTrips[Math.max(0, Math.min(index, returnTrips.length - 1))];
+    if (trip) setReturnTripId(trip.tripId);
+  };
 
   return <main className="app-shell">
     <header className="topbar">
@@ -190,7 +208,7 @@ export default function Home() {
       <div className={'status-pill ' + (error ? 'offline' : data ? 'online' : '')}><span /> {error ? 'Check feed' : data ? 'Live' : 'Connecting'}</div>
     </header>
 
-    <section className="intro"><p className="eyebrow">Next departures</p><h1>Leave on time.<br /><em>Arrive ready.</em></h1><p className="intro-copy">The card always starts with the next usable bus. Swipe a card left or use its arrows to explore later trips.</p></section>
+    <section className="intro"><p className="eyebrow">Next departures</p><h1>Leave on time.<br /><em>Arrive ready.</em></h1><p className="intro-copy">The card starts at the next usable bus. Swipe left for later trips or right to revisit recent ones.</p></section>
     {error && <div className="alert">{error}. Drive is the safe fallback until live bus data returns.</div>}
 
     <section
@@ -198,12 +216,12 @@ export default function Home() {
       onTouchStart={(event) => { morningTouchStart.current = event.changedTouches[0]?.clientX ?? 0; }}
       onTouchEnd={(event) => {
         const delta = (event.changedTouches[0]?.clientX ?? 0) - morningTouchStart.current;
-        if (delta < -45) setOutboundIndex((index) => Math.min(index + 1, Math.max(0, outboundTrips.length - 1)));
-        if (delta > 45) setOutboundIndex((index) => Math.max(0, index - 1));
+        if (delta < -45) setOutboundAt(outboundIndex + 1);
+        if (delta > 45) setOutboundAt(outboundIndex - 1);
       }}
     >
       <div className="card-top"><div><span className="eyebrow">Morning commute</span><h2>To work</h2></div><span className="mode-badge">BIKE · BUS · BIKE</span></div>
-      <TripPager index={outboundIndex} count={outboundTrips.length} onPrevious={() => setOutboundIndex((index) => Math.max(0, index - 1))} onNext={() => setOutboundIndex((index) => Math.min(index + 1, Math.max(0, outboundTrips.length - 1)))} />
+      <TripPager index={outboundIndex} count={outboundTrips.length} onPrevious={() => setOutboundAt(outboundIndex - 1)} onNext={() => setOutboundAt(outboundIndex + 1)} />
       <div className="big-time"><span>Leave by</span><strong>{plans.morning ? clock(plans.morning.leave) : '—'}</strong><span className="arrival-target">Arrive by <b>{plans.morning?.work ? clock(plans.morning.work) : '—'}</b></span></div>
       <div className="legs">
         <Leg mode="bike" title="Bike to Meredith" times={plans.morning ? rangeLabel(plans.morning.leave, plans.morning.station ?? plans.morning.leave) : '—'} detail="14 min · 8 min bus buffer" />
@@ -218,12 +236,12 @@ export default function Home() {
       onTouchStart={(event) => { afternoonTouchStart.current = event.changedTouches[0]?.clientX ?? 0; }}
       onTouchEnd={(event) => {
         const delta = (event.changedTouches[0]?.clientX ?? 0) - afternoonTouchStart.current;
-        if (delta < -45) setReturnIndex((index) => Math.min(index + 1, Math.max(0, returnTrips.length - 1)));
-        if (delta > 45) setReturnIndex((index) => Math.max(0, index - 1));
+        if (delta < -45) setReturnAt(returnIndex + 1);
+        if (delta > 45) setReturnAt(returnIndex - 1);
       }}
     >
       <div className="card-top"><div><span className="eyebrow">Commute home</span><h2>Back home</h2></div><span className="mode-badge">BIKE · BUS · BIKE</span></div>
-      <TripPager index={returnIndex} count={returnTrips.length} onPrevious={() => setReturnIndex((index) => Math.max(0, index - 1))} onNext={() => setReturnIndex((index) => Math.min(index + 1, Math.max(0, returnTrips.length - 1)))} />
+      <TripPager index={returnIndex} count={returnTrips.length} onPrevious={() => setReturnAt(returnIndex - 1)} onNext={() => setReturnAt(returnIndex + 1)} />
       <div className="big-time"><span>Leave work by</span><strong>{plans.afternoon ? clock(plans.afternoon.leave) : '—'}</strong><span className="arrival-target">Arrive home by <b>{plans.afternoon?.home ? clock(plans.afternoon.home) : '—'}</b></span></div>
       <div className="legs">
         <Leg mode="bike" title="Bike to RTC" times={plans.afternoon ? rangeLabel(plans.afternoon.leave, plans.afternoon.rtc) : '—'} detail="5 min · 8 min bus buffer" />
@@ -236,4 +254,3 @@ export default function Home() {
     <footer><span>Route 100 live feed</span><span>{feedAge === null ? 'Waiting for update' : 'Updated ' + feedAge + 's ago'}</span></footer>
   </main>;
 }
-

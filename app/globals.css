@@ -70,6 +70,7 @@ button { font: inherit; }
   border-radius: 27px;
   background: var(--card);
   box-shadow: 0 18px 48px rgba(30, 62, 51, .09);
+  touch-action: pan-y;
 }
 .morning-card { border-color: var(--navy); background: var(--navy); color: #f6fbff; }
 .card-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 14px; }
