@@ -1,39 +1,49 @@
 {
-  "generatedAt": "2026-09-01T14:32:53.706Z",
+  "generatedAt": "2026-09-14T10:33:12.271Z",
   "databasePath": "C:\\Users\\Evan Gorczynski\\Documents\\Codex\\2026-08-26\\i-x20-2\\route-100-tracker\\work\\route100-history.sqlite",
   "method": {
     "target": "Terminal prediction = median of each trip's final three live predicted times",
-    "split": "Time-ordered holdout: latest complete collection day per direction is test; earlier days are train",
+    "split": "Weekdays only. Time-ordered holdout: latest complete collection day per direction is test; earlier days are train",
     "model": "Ridge regression predicting terminal offset from schedule time, first live offset, and vehicle availability",
     "interval": "Empirical 80% prediction interval from training residuals (10th–90th percentiles)",
     "minimumTripSamples": 3
   },
   "data": {
-    "records": 105,
+    "records": 267,
     "directions": [
       {
         "direction": 1,
-        "trainN": 37,
-        "testN": 12,
+        "trainN": 105,
+        "testN": 15,
         "trainDays": [
           "2026-08-27",
           "2026-08-28",
-          "2026-08-29",
-          "2026-08-30"
+          "2026-08-31",
+          "2026-09-02",
+          "2026-09-03",
+          "2026-09-04",
+          "2026-09-07",
+          "2026-09-09",
+          "2026-09-10"
         ],
-        "testDay": "2026-08-31"
+        "testDay": "2026-09-11"
       },
       {
         "direction": 0,
-        "trainN": 41,
-        "testN": 15,
+        "trainN": 133,
+        "testN": 14,
         "trainDays": [
           "2026-08-26",
           "2026-08-27",
-          "2026-08-29",
-          "2026-08-30"
+          "2026-08-31",
+          "2026-09-01",
+          "2026-09-02",
+          "2026-09-03",
+          "2026-09-04",
+          "2026-09-08",
+          "2026-09-10"
         ],
-        "testDay": "2026-08-31"
+        "testDay": "2026-09-11"
       }
     ]
   },
@@ -44,64 +54,77 @@
       "trainDays": [
         "2026-08-27",
         "2026-08-28",
-        "2026-08-29",
-        "2026-08-30"
+        "2026-08-31",
+        "2026-09-02",
+        "2026-09-03",
+        "2026-09-04",
+        "2026-09-07",
+        "2026-09-09",
+        "2026-09-10"
       ],
-      "testDay": "2026-08-31",
-      "trainN": 37,
-      "testN": 12,
-      "trainingResidualP10Min": -1.0898063689456816,
-      "trainingResidualP90Min": 1.671932188214448,
+      "testDay": "2026-09-11",
+      "trainN": 105,
+      "testN": 15,
+      "trainingResidualP10Min": -0.8526789231609793,
+      "trainingResidualP90Min": 1.4836983186665391,
       "methods": {
         "schedule": {
-          "n": 12,
-          "maeMin": 3.3263888888888906,
-          "rmseMin": 4.047893256351356,
-          "biasMin": -3.3263888888888906,
-          "medianAbsoluteErrorMin": 2.2000000000000455,
-          "p90AbsoluteErrorMin": 6.158333333333331,
+          "n": 15,
+          "maeMin": 2.6677777777777805,
+          "rmseMin": 2.9894846576824117,
+          "biasMin": -2.6677777777777805,
+          "medianAbsoluteErrorMin": 2.2333333333333485,
+          "p90AbsoluteErrorMin": 4.873333333333312,
           "within2MinPct": 0.3333333333333333,
-          "within5MinPct": 0.75,
+          "within5MinPct": 0.8666666666666667,
           "within10MinPct": 1
         },
         "firstLivePrediction": {
-          "n": 12,
-          "maeMin": 1.0958333333333314,
-          "rmseMin": 2.015547209954541,
-          "biasMin": -0.42638888888888954,
+          "n": 15,
+          "maeMin": 0.3411111111111154,
+          "rmseMin": 0.8037297316147278,
+          "biasMin": -0.16333333333333258,
           "medianAbsoluteErrorMin": 0,
-          "p90AbsoluteErrorMin": 3.971666666666653,
-          "within2MinPct": 0.75,
+          "p90AbsoluteErrorMin": 1.2400000000000204,
+          "within2MinPct": 0.9333333333333333,
           "within5MinPct": 1,
           "within10MinPct": 1
         },
         "ridgeModel": {
-          "n": 12,
-          "maeMin": 1.3858846937644822,
-          "rmseMin": 2.8513051350267573,
-          "biasMin": 0.2582073028695662,
-          "medianAbsoluteErrorMin": 0.21525182142069132,
-          "p90AbsoluteErrorMin": 2.9562325179716273,
-          "within2MinPct": 0.75,
-          "within5MinPct": 0.9166666666666666,
+          "n": 15,
+          "maeMin": 0.5706838825647734,
+          "rmseMin": 1.104704745949118,
+          "biasMin": 0.20311913086060696,
+          "medianAbsoluteErrorMin": 0.2062753454330477,
+          "p90AbsoluteErrorMin": 1.5277265564627154,
+          "within2MinPct": 0.8666666666666667,
+          "within5MinPct": 1,
           "within10MinPct": 1,
-          "interval80CoveragePct": 0.75
+          "interval80CoveragePct": 0.8666666666666667
         }
       },
       "predictions": [
         {
+          "scheduled": "06:47",
+          "estimate": "06:55",
+          "interval80": "06:54–06:56",
+          "terminalEstimate": "06:51",
+          "samples": 12,
+          "vehiclePct": 1
+        },
+        {
           "scheduled": "07:02",
-          "estimate": "07:09",
-          "interval80": "07:08–07:11",
-          "terminalEstimate": "07:11",
-          "samples": 32,
+          "estimate": "07:04",
+          "interval80": "07:04–07:06",
+          "terminalEstimate": "07:04",
+          "samples": 25,
           "vehiclePct": 1
         },
         {
           "scheduled": "07:17",
-          "estimate": "07:31",
-          "interval80": "07:30–07:33",
-          "terminalEstimate": "07:22",
+          "estimate": "07:24",
+          "interval80": "07:23–07:25",
+          "terminalEstimate": "07:23",
           "samples": 43,
           "vehiclePct": 1
         },
@@ -109,24 +132,32 @@
           "scheduled": "07:32",
           "estimate": "07:35",
           "interval80": "07:34–07:37",
-          "terminalEstimate": "07:38",
-          "samples": 59,
+          "terminalEstimate": "07:35",
+          "samples": 54,
           "vehiclePct": 1
         },
         {
           "scheduled": "07:47",
           "estimate": "07:50",
           "interval80": "07:49–07:52",
-          "terminalEstimate": "07:51",
-          "samples": 59,
+          "terminalEstimate": "07:52",
+          "samples": 60,
           "vehiclePct": 1
         },
         {
           "scheduled": "07:59",
-          "estimate": "07:59",
-          "interval80": "07:58–08:01",
+          "estimate": "08:00",
+          "interval80": "07:59–08:01",
           "terminalEstimate": "08:00",
           "samples": 54,
+          "vehiclePct": 1
+        },
+        {
+          "scheduled": "08:14",
+          "estimate": "08:16",
+          "interval80": "08:15–08:18",
+          "terminalEstimate": "08:16",
+          "samples": 61,
           "vehiclePct": 1
         },
         {
@@ -150,14 +181,14 @@
           "estimate": "09:01",
           "interval80": "09:00–09:03",
           "terminalEstimate": "09:01",
-          "samples": 61,
+          "samples": 60,
           "vehiclePct": 1
         },
         {
           "scheduled": "09:14",
           "estimate": "09:17",
           "interval80": "09:16–09:18",
-          "terminalEstimate": "09:16",
+          "terminalEstimate": "09:17",
           "samples": 48,
           "vehiclePct": 1
         },
@@ -165,24 +196,32 @@
           "scheduled": "09:29",
           "estimate": "09:32",
           "interval80": "09:31–09:33",
-          "terminalEstimate": "09:31",
-          "samples": 42,
+          "terminalEstimate": "09:32",
+          "samples": 44,
+          "vehiclePct": 1
+        },
+        {
+          "scheduled": "09:44",
+          "estimate": "09:47",
+          "interval80": "09:46–09:48",
+          "terminalEstimate": "09:47",
+          "samples": 37,
           "vehiclePct": 1
         },
         {
           "scheduled": "09:59",
           "estimate": "10:02",
           "interval80": "10:01–10:03",
-          "terminalEstimate": "10:01",
-          "samples": 17,
+          "terminalEstimate": "10:02",
+          "samples": 23,
           "vehiclePct": 1
         },
         {
           "scheduled": "10:14",
           "estimate": "10:17",
-          "interval80": "10:15–10:18",
+          "interval80": "10:16–10:18",
           "terminalEstimate": "10:16",
-          "samples": 6,
+          "samples": 4,
           "vehiclePct": 1
         }
       ]
@@ -193,64 +232,69 @@
       "trainDays": [
         "2026-08-26",
         "2026-08-27",
-        "2026-08-29",
-        "2026-08-30"
+        "2026-08-31",
+        "2026-09-01",
+        "2026-09-02",
+        "2026-09-03",
+        "2026-09-04",
+        "2026-09-08",
+        "2026-09-10"
       ],
-      "testDay": "2026-08-31",
-      "trainN": 41,
-      "testN": 15,
-      "trainingResidualP10Min": -2.963804229256801,
-      "trainingResidualP90Min": 2.3297720861781994,
+      "testDay": "2026-09-11",
+      "trainN": 133,
+      "testN": 14,
+      "trainingResidualP10Min": -2.931711012110144,
+      "trainingResidualP90Min": 2.923561649320795,
       "methods": {
         "schedule": {
-          "n": 15,
-          "maeMin": 3.987777777777781,
-          "rmseMin": 7.521740096152889,
-          "biasMin": -3.987777777777781,
+          "n": 14,
+          "maeMin": 2.107142857142865,
+          "rmseMin": 3.8031054562174855,
+          "biasMin": -2.107142857142865,
           "medianAbsoluteErrorMin": 0,
-          "p90AbsoluteErrorMin": 11.673333333333355,
-          "within2MinPct": 0.6666666666666666,
-          "within5MinPct": 0.6666666666666666,
-          "within10MinPct": 0.8666666666666667
+          "p90AbsoluteErrorMin": 6.4450000000000305,
+          "within2MinPct": 0.7142857142857143,
+          "within5MinPct": 0.8571428571428571,
+          "within10MinPct": 0.9285714285714286
         },
         "firstLivePrediction": {
-          "n": 15,
-          "maeMin": 3.987777777777781,
-          "rmseMin": 7.521740096152889,
-          "biasMin": -3.987777777777781,
+          "n": 14,
+          "maeMin": 1.6595238095238187,
+          "rmseMin": 2.810432661714531,
+          "biasMin": -1.6595238095238187,
           "medianAbsoluteErrorMin": 0,
-          "p90AbsoluteErrorMin": 11.673333333333355,
-          "within2MinPct": 0.6666666666666666,
-          "within5MinPct": 0.6666666666666666,
-          "within10MinPct": 0.8666666666666667
+          "p90AbsoluteErrorMin": 4.293333333333374,
+          "within2MinPct": 0.7142857142857143,
+          "within5MinPct": 0.9285714285714286,
+          "within10MinPct": 1
         },
         "ridgeModel": {
-          "n": 15,
-          "maeMin": 3.5204454489964316,
-          "rmseMin": 5.820415997096523,
-          "biasMin": -2.165601948908216,
-          "medianAbsoluteErrorMin": 1.995136559330728,
-          "p90AbsoluteErrorMin": 7.575674893337518,
-          "within2MinPct": 0.5333333333333333,
-          "within5MinPct": 0.8666666666666667,
-          "within10MinPct": 0.9333333333333333,
-          "interval80CoveragePct": 0.6666666666666666
+          "n": 14,
+          "maeMin": 1.5482275387860907,
+          "rmseMin": 2.0798995748167792,
+          "biasMin": 0.4761773306803723,
+          "medianAbsoluteErrorMin": 1.2709051525177033,
+          "p90AbsoluteErrorMin": 3.454156512477089,
+          "within2MinPct": 0.7857142857142857,
+          "within5MinPct": 0.9285714285714286,
+          "within10MinPct": 1,
+          "interval80CoveragePct": 0.8571428571428571
         }
       },
       "predictions": [
         {
           "scheduled": "15:00",
-          "estimate": "15:05",
-          "interval80": "15:02–15:08",
-          "terminalEstimate": "15:07",
-          "samples": 12,
-          "vehiclePct": 1
+          "estimate": "15:03",
+          "interval80": "15:01–15:06",
+          "terminalEstimate": "15:02",
+          "samples": 7,
+          "vehiclePct": 0.8571428571428571
         },
         {
           "scheduled": "15:15",
-          "estimate": "15:20",
-          "interval80": "15:17–15:22",
-          "terminalEstimate": "15:16",
+          "estimate": "15:19",
+          "interval80": "15:16–15:22",
+          "terminalEstimate": "15:17",
           "samples": 22,
           "vehiclePct": 1
         },
@@ -258,54 +302,54 @@
           "scheduled": "15:30",
           "estimate": "15:34",
           "interval80": "15:31–15:37",
-          "terminalEstimate": "15:39",
-          "samples": 43,
-          "vehiclePct": 1
+          "terminalEstimate": "15:34",
+          "samples": 38,
+          "vehiclePct": 0.9210526315789473
         },
         {
           "scheduled": "15:45",
-          "estimate": "15:49",
-          "interval80": "15:46–15:51",
-          "terminalEstimate": "15:59",
-          "samples": 61,
+          "estimate": "15:48",
+          "interval80": "15:45–15:51",
+          "terminalEstimate": "15:52",
+          "samples": 58,
           "vehiclePct": 1
         },
         {
           "scheduled": "16:00",
-          "estimate": "16:03",
-          "interval80": "16:00–16:06",
-          "terminalEstimate": "16:22",
-          "samples": 60,
+          "estimate": "16:16",
+          "interval80": "16:13–16:18",
+          "terminalEstimate": "16:10",
+          "samples": 29,
           "vehiclePct": 1
         },
         {
           "scheduled": "16:15",
           "estimate": "16:18",
           "interval80": "16:15–16:20",
-          "terminalEstimate": "16:22",
+          "terminalEstimate": "16:19",
           "samples": 61,
           "vehiclePct": 1
         },
         {
           "scheduled": "16:30",
-          "estimate": "16:32",
-          "interval80": "16:30–16:35",
+          "estimate": "16:31",
+          "interval80": "16:28–16:34",
           "terminalEstimate": "16:30",
-          "samples": 60,
-          "vehiclePct": 1
+          "samples": 61,
+          "vehiclePct": 0.9836065573770492
         },
         {
           "scheduled": "16:45",
           "estimate": "16:46",
-          "interval80": "16:43–16:48",
+          "interval80": "16:43–16:49",
           "terminalEstimate": "16:45",
-          "samples": 21,
-          "vehiclePct": 0
+          "samples": 24,
+          "vehiclePct": 0.125
         },
         {
           "scheduled": "17:00",
-          "estimate": "17:02",
-          "interval80": "16:59–17:04",
+          "estimate": "17:01",
+          "interval80": "16:58–17:04",
           "terminalEstimate": "17:00",
           "samples": 61,
           "vehiclePct": 1
@@ -313,50 +357,42 @@
         {
           "scheduled": "17:15",
           "estimate": "17:16",
-          "interval80": "17:13–17:18",
+          "interval80": "17:13–17:19",
           "terminalEstimate": "17:15",
-          "samples": 60,
+          "samples": 57,
           "vehiclePct": 1
         },
         {
           "scheduled": "17:30",
           "estimate": "17:31",
-          "interval80": "17:28–17:33",
+          "interval80": "17:28–17:34",
           "terminalEstimate": "17:30",
-          "samples": 48,
+          "samples": 57,
           "vehiclePct": 1
         },
         {
           "scheduled": "17:45",
           "estimate": "17:45",
-          "interval80": "17:42–17:47",
+          "interval80": "17:42–17:48",
           "terminalEstimate": "17:45",
-          "samples": 14,
+          "samples": 29,
           "vehiclePct": 1
         },
         {
           "scheduled": "18:00",
           "estimate": "18:00",
-          "interval80": "17:57–18:02",
+          "interval80": "17:57–18:03",
           "terminalEstimate": "18:00",
-          "samples": 15,
+          "samples": 24,
           "vehiclePct": 1
         },
         {
           "scheduled": "18:15",
           "estimate": "18:13",
-          "interval80": "18:10–18:15",
+          "interval80": "18:11–18:16",
           "terminalEstimate": "18:15",
-          "samples": 21,
-          "vehiclePct": 0
-        },
-        {
-          "scheduled": "18:30",
-          "estimate": "18:29",
-          "interval80": "18:26–18:31",
-          "terminalEstimate": "18:30",
-          "samples": 7,
-          "vehiclePct": 1
+          "samples": 24,
+          "vehiclePct": 0.125
         }
       ]
     }

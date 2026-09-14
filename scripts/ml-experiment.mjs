@@ -64,6 +64,11 @@ function isInCollectionWindow(row) {
     : minute >= 900 && minute < 961;
 }
 
+function isWeekday(epochSeconds) {
+  const day = new Date(Number(epochSeconds) * 1000).getDay();
+  return day >= 1 && day <= 5;
+}
+
 function solveLinearSystem(matrix, vector) {
   const size = vector.length;
   const augmented = matrix.map((row, index) => [...row, vector[index]]);
@@ -144,7 +149,7 @@ for (const row of parseCsv(resolve(repoDirectory, 'work', 'gtfs', 'current', 'st
 
 const database = new DatabaseSync(databasePath, { readOnly: true });
 const observations = database.prepare(`SELECT observed_at, trip_id, direction_id, stop_id, predicted_time, vehicle_id
-  FROM observations ORDER BY observed_at`).all().filter(isInCollectionWindow);
+  FROM observations ORDER BY observed_at`).all().filter((row) => isWeekday(row.observed_at) && isInCollectionWindow(row));
 const runs = database.prepare('SELECT collected_at, error FROM collector_runs ORDER BY collected_at').all();
 database.close();
 
@@ -243,7 +248,7 @@ const report = {
   databasePath,
   method: {
     target: 'Terminal prediction = median of each trip\'s final three live predicted times',
-    split: 'Time-ordered holdout: latest complete collection day per direction is test; earlier days are train',
+    split: 'Weekdays only. Time-ordered holdout: latest complete collection day per direction is test; earlier days are train',
     model: 'Ridge regression predicting terminal offset from schedule time, first live offset, and vehicle availability',
     interval: 'Empirical 80% prediction interval from training residuals (10th–90th percentiles)',
     minimumTripSamples: MIN_SAMPLES_PER_TRIP,
@@ -258,7 +263,7 @@ const lines = [
   '',
   `Generated: ${report.generatedAt}`, 
   '',
-  'This is a first-pass nowcast experiment. The target is the terminal live prediction for each trip, not a verified stop-passage time. The latest complete day is held out; no test-day rows are used to fit the model.',
+  'This is a first-pass nowcast experiment using weekdays only. The target is the terminal live prediction for each trip, not a verified stop-passage time. The latest complete day is held out; no test-day rows are used to fit the model.',
   '',
   '| Direction | Train days | Test day | Train trips | Test trips |',
   '|---|---|---|---:|---:|',
