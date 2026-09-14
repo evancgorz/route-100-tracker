@@ -15,7 +15,11 @@ const workDirectory = resolve(repoDirectory, 'work');
 const databasePath = process.env.ROUTE100_DB_PATH || resolve(workDirectory, 'route100-history.sqlite');
 const jsonPath = resolve(workDirectory, 'ml-experiment-latest.json');
 const markdownPath = resolve(workDirectory, 'ml-experiment-latest.md');
+const appDataDirectory = resolve(repoDirectory, 'app', 'data');
+const modelPath = resolve(appDataDirectory, 'ml-model.json');
+const schedulePath = resolve(appDataDirectory, 'route100-schedule.json');
 mkdirSync(workDirectory, { recursive: true });
+mkdirSync(appDataDirectory, { recursive: true });
 
 function parseCsv(path) {
   const [header, ...lines] = readFileSync(path, 'utf8').trim().split(/\r?\n/);
@@ -231,6 +235,7 @@ for (const direction of [1, 0]) {
     testN: test.length,
     trainingResidualP10Min: residualP10,
     trainingResidualP90Min: residualP90,
+    coefficients,
     methods,
     predictions: test.map((record) => ({
       scheduled: formatClock(record.scheduledMin),
@@ -258,6 +263,38 @@ const report = {
 };
 writeFileSync(jsonPath, `${JSON.stringify(report, null, 2)}\n`, 'utf8');
 
+const modelArtifact = {
+  version: 1,
+  generatedAt: report.generatedAt,
+  target: report.method.target,
+  featureOrder: ['intercept', 'scheduledMin / 1440', 'firstOffsetMin / 60', 'vehiclePresent'],
+  directions: directionResults.map((result) => ({
+    direction: result.direction,
+    label: result.label,
+    coefficients: result.coefficients,
+    residualP10Min: result.trainingResidualP10Min,
+    residualP90Min: result.trainingResidualP90Min,
+    trainN: result.trainN,
+    testDay: result.testDay,
+  })),
+};
+writeFileSync(modelPath, `${JSON.stringify(modelArtifact, null, 2)}\n`, 'utf8');
+
+const scheduleArtifact = {};
+for (const [key, arrivalTime] of scheduleMap) {
+  const [tripId] = key.split('|');
+  const trip = tripMap.get(tripId);
+  if (!trip) continue;
+  const [hours, minutes, seconds = 0] = arrivalTime.split(':').map(Number);
+  scheduleArtifact[tripId] = {
+    direction: Number(trip.direction_id),
+    stopId: TARGETS.get(Number(trip.direction_id)).stopId,
+    clock: arrivalTime,
+    scheduledMin: hours * 60 + minutes + seconds / 60,
+  };
+}
+writeFileSync(schedulePath, `${JSON.stringify(scheduleArtifact, null, 2)}\n`, 'utf8');
+
 const lines = [
   '# Route 100 ML experiment',
   '',
@@ -277,4 +314,4 @@ for (const result of directionResults) {
 }
 lines.push('', '## Interpretation', '', '- Use MAE and P90 absolute error as the primary regular metrics; bias shows systematic early/late behavior.', '- The 80% interval is a calibration check, not a formal confidence interval.', '- Sparse histories and fixed schedule predictions can make an interval look artificially narrow; the report retains sample and vehicle coverage so those cases are visible.');
 writeFileSync(markdownPath, `${lines.join('\n')}\n`, 'utf8');
-console.log(JSON.stringify({ jsonPath, markdownPath, data: report.data, results: directionResults.map((result) => ({ label: result.label, testDay: result.testDay, methods: result.methods })) }, null, 2));
+console.log(JSON.stringify({ jsonPath, markdownPath, modelPath, schedulePath, data: report.data, results: directionResults.map((result) => ({ label: result.label, testDay: result.testDay, methods: result.methods })) }, null, 2));

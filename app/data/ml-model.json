@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "generatedAt": "2026-09-14T11:05:39.437Z",
+  "target": "Terminal prediction = median of each trip's final three live predicted times",
+  "featureOrder": [
+    "intercept",
+    "scheduledMin / 1440",
+    "firstOffsetMin / 60",
+    "vehiclePresent"
+  ],
+  "directions": [
+    {
+      "direction": 1,
+      "label": "Meredith → RTC arrival",
+      "coefficients": [
+        -1.2327443118739332,
+        0.16300040823817596,
+        96.9290091564462,
+        0
+      ],
+      "residualP10Min": -0.8526789231609793,
+      "residualP90Min": 1.4836983186665391,
+      "trainN": 105,
+      "testDay": "2026-09-11"
+    },
+    {
+      "direction": 0,
+      "label": "RTC → Meredith departure",
+      "coefficients": [
+        26.504420355321876,
+        -36.883640314143925,
+        120.97556606858166,
+        1.016384199550883
+      ],
+      "residualP10Min": -2.931711012110144,
+      "residualP90Min": 2.923561649320795,
+      "trainN": 133,
+      "testDay": "2026-09-11"
+    }
+  ]
+}

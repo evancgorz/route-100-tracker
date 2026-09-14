@@ -78,6 +78,13 @@ button { font: inherit; }
 h2 { margin: 7px 0 0; font-size: clamp(23px, 6vw, 32px); line-height: 1; letter-spacing: -.045em; }
 .mode-badge { flex: none; padding: 7px 9px; border-radius: 999px; background: var(--green-soft); color: #176348; font-size: 10px; font-weight: 850; white-space: nowrap; }
 .morning-card .mode-badge { background: rgba(157, 219, 194, .16); color: #bcebd7; }
+.trip-pager { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 34px; margin-top: 18px; color: var(--muted); font-size: 11px; font-weight: 700; }
+.morning-card .trip-pager { color: #a8bdca; }
+.trip-controls { display: flex; gap: 6px; }
+.trip-controls button { display: grid; place-items: center; width: 29px; height: 29px; border: 1px solid var(--line); border-radius: 50%; background: transparent; color: inherit; cursor: pointer; font-size: 16px; line-height: 1; }
+.morning-card .trip-controls button { border-color: rgba(220, 236, 247, .25); }
+.trip-controls button:disabled { cursor: default; opacity: .35; }
+.trip-controls button:not(:disabled):focus-visible { outline: 2px solid currentColor; outline-offset: 2px; }
 .card-times { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 24px; }
 .time-block { min-width: 0; }
 .card-label { color: var(--muted); font-size: 10px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }

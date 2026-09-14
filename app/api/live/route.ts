@@ -1,5 +1,7 @@
 import GtfsRealtimeBindings from 'gtfs-realtime-bindings';
 import { env } from 'cloudflare:workers';
+import mlModel from '../../data/ml-model.json';
+import route100Schedule from '../../data/route100-schedule.json';
 
 export const dynamic = 'force-dynamic';
 
@@ -14,11 +16,57 @@ const targets = {
 
 type DirectionKey = keyof typeof targets;
 type FeedEntity = any;
+type ScheduleEntry = { direction: number; stopId: string; clock: string; scheduledMin: number };
+type ModelDirection = { direction: number; coefficients: number[]; residualP10Min: number; residualP90Min: number };
+
+const scheduleByTrip = route100Schedule as Record<string, ScheduleEntry>;
+const modelByDirection = new Map<number, ModelDirection>(
+  (mlModel.directions as ModelDirection[]).map((direction) => [direction.direction, direction]),
+);
+const localClock = new Intl.DateTimeFormat('en-US', {
+  timeZone: 'America/New_York',
+  hour: '2-digit',
+  minute: '2-digit',
+  second: '2-digit',
+  hourCycle: 'h23',
+});
 
 function seconds(value: unknown): number | null {
   if (value === null || value === undefined) return null;
   const parsed = Number(String(value));
   return Number.isFinite(parsed) ? parsed : null;
+}
+
+function localMinute(epochSeconds: number): number {
+  const parts = Object.fromEntries(localClock.formatToParts(epochSeconds * 1000).map((part) => [part.type, part.value]));
+  return Number(parts.hour) * 60 + Number(parts.minute) + Number(parts.second) / 60;
+}
+
+function learnedPrediction(item: { tripId: string; predictedTime: number; hasVehicle: boolean }, direction: number, observedAt: number) {
+  const schedule = scheduleByTrip[item.tripId];
+  const model = modelByDirection.get(direction);
+  if (!schedule || !model || schedule.direction !== direction || model.coefficients.length < 4) return null;
+  const firstOffsetMin = localMinute(item.predictedTime) - schedule.scheduledMin;
+  const features = [1, schedule.scheduledMin / 1440, firstOffsetMin / 60, item.hasVehicle ? 1 : 0];
+  const offsetMin = model.coefficients.reduce((sum, coefficient, index) => sum + coefficient * features[index], 0);
+  const scheduledEpoch = observedAt + (schedule.scheduledMin - localMinute(observedAt)) * 60;
+  const mlPredictedTime = Math.round(scheduledEpoch + offsetMin * 60);
+  const mlLowerTime = Math.round(mlPredictedTime + model.residualP10Min * 60);
+  const mlUpperTime = Math.round(mlPredictedTime + model.residualP90Min * 60);
+  // The morning live feed currently beats Ridge in validation; keep it primary
+  // while using the learned range. The afternoon Ridge model is primary.
+  const predictionSource = direction === 1 ? 'live' : 'learned';
+  return {
+    scheduleTime: Math.round(scheduledEpoch),
+    firstOffsetMin,
+    mlPredictedTime,
+    mlLowerTime,
+    mlUpperTime,
+    primaryPredictedTime: predictionSource === 'learned' ? mlPredictedTime : item.predictedTime,
+    predictionSource,
+    modelVersion: mlModel.version,
+    modelGeneratedAt: mlModel.generatedAt,
+  };
 }
 
 function latestDelayBefore(updates: any[], sequence: number): number | null {
@@ -113,15 +161,21 @@ export async function GET() {
         longitude: vehicle?.position?.longitude ?? null,
         hasVehicle: Boolean(vehicle),
       };
-      result[key].push(item);
+      const learned = learnedPrediction(item, target.directionId, observedAt);
+      result[key].push({ ...item, ...(learned || {
+        primaryPredictedTime: predictedTime,
+        predictionSource: 'live',
+        modelVersion: null,
+        modelGeneratedAt: null,
+      }) });
       rows.push({ ...item, observedAt, feedTimestamp, directionId: target.directionId, stopId: target.stopId });
     }
 
-    result.outbound.sort((a, b) => a.predictedTime - b.predictedTime);
-    result.return.sort((a, b) => a.predictedTime - b.predictedTime);
+    result.outbound.sort((a, b) => a.primaryPredictedTime - b.primaryPredictedTime);
+    result.return.sort((a, b) => a.primaryPredictedTime - b.primaryPredictedTime);
     await saveObservations(rows.slice(0, 12));
 
-    return Response.json({ fetchedAt: observedAt, feedTimestamp, directions: result }, { headers: { 'cache-control': 'no-store' } });
+    return Response.json({ fetchedAt: observedAt, feedTimestamp, model: { version: mlModel.version, generatedAt: mlModel.generatedAt }, directions: result }, { headers: { 'cache-control': 'no-store' } });
   } catch (error) {
     return Response.json({ error: error instanceof Error ? error.message : 'Unable to load arrivals' }, { status: 503 });
   }

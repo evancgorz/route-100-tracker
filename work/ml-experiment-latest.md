@@ -1,6 +1,6 @@
 # Route 100 ML experiment
 
-Generated: 2026-09-14T10:33:12.271Z
+Generated: 2026-09-14T11:05:39.437Z
 
 This is a first-pass nowcast experiment using weekdays only. The target is the terminal live prediction for each trip, not a verified stop-passage time. The latest complete day is held out; no test-day rows are used to fit the model.
 

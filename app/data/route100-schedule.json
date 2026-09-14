@@ -1,0 +1,1724 @@
+{
+  "3a0896e0-c1bc-4f6d-b254-65f052da613d": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "07:47:03",
+    "scheduledMin": 467.05
+  },
+  "70690010-cdeb-47c9-8640-1a227db23c95": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "23:15:00",
+    "scheduledMin": 1395
+  },
+  "cb82eb74-0b1a-45f1-8709-1fc5c8a430f0": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "20:15:00",
+    "scheduledMin": 1215
+  },
+  "6a57efd1-ffa5-49eb-80b0-2627b3ad3694": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "09:45:00",
+    "scheduledMin": 585
+  },
+  "5918e09b-fc81-4c8d-b818-f96ed9785925": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "10:15:00",
+    "scheduledMin": 615
+  },
+  "d8883820-e823-4d4e-b8f5-cbe0f1c430d7": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "10:45:00",
+    "scheduledMin": 645
+  },
+  "d672a3e9-d85c-4a05-97ca-4200b28c8e42": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "11:15:00",
+    "scheduledMin": 675
+  },
+  "21a1c557-3482-419d-915c-8569be506306": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "11:45:00",
+    "scheduledMin": 705
+  },
+  "b431f44f-4992-46e8-ae34-9e940d3bd4dc": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "12:15:00",
+    "scheduledMin": 735
+  },
+  "49967aad-e3d9-4e60-a96d-f5a1a0128ba9": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "12:45:00",
+    "scheduledMin": 765
+  },
+  "c511a26d-1cc4-496a-ae82-6558d121a871": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "13:15:00",
+    "scheduledMin": 795
+  },
+  "afafe83f-fe42-4cb5-8fc1-2fb7f879f694": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "13:45:00",
+    "scheduledMin": 825
+  },
+  "e3c4e1ab-7827-4e15-89af-62bbe9314eae": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "14:15:00",
+    "scheduledMin": 855
+  },
+  "21c10f48-71a9-492a-a909-d5dba405815f": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "13:15:00",
+    "scheduledMin": 795
+  },
+  "5bb21de5-f814-47b0-92d1-bbf3685b041a": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "15:44:17",
+    "scheduledMin": 944.2833333333333
+  },
+  "2bbb842d-40bc-4815-908d-ce45fd764f62": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "17:15:00",
+    "scheduledMin": 1035
+  },
+  "61b1b5a7-98cb-4a60-ace2-86988c64cbb6": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "12:44:17",
+    "scheduledMin": 764.2833333333333
+  },
+  "233fde2e-0143-4875-898c-dec8a22239a6": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "16:40:37",
+    "scheduledMin": 1000.6166666666667
+  },
+  "3529cc1d-3949-41e7-b092-d4cb94550576": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "14:45:13",
+    "scheduledMin": 885.2166666666667
+  },
+  "56151967-599d-4555-9966-73fe0c744d38": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "07:02:03",
+    "scheduledMin": 422.05
+  },
+  "aa9391b7-9b71-48e7-bade-a600b60d3b89": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "08:59:17",
+    "scheduledMin": 539.2833333333333
+  },
+  "293d0cd6-56a3-4839-9afe-81cee1bf6b3a": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "10:59:17",
+    "scheduledMin": 659.2833333333333
+  },
+  "aa78c006-9eb4-4952-b082-a70378ca29ca": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "17:14:17",
+    "scheduledMin": 1034.2833333333333
+  },
+  "ca257c25-07a7-4965-a304-29d40259ff4b": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "18:44:17",
+    "scheduledMin": 1124.2833333333333
+  },
+  "b4f1e45d-24ae-473b-8b80-260d3c29aeeb": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "08:44:17",
+    "scheduledMin": 524.2833333333333
+  },
+  "21a09950-05da-4a4f-a816-e3a9f0c74b47": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "09:14:17",
+    "scheduledMin": 554.2833333333333
+  },
+  "40762d6a-8376-42a4-aa2c-bec6b5423463": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "09:44:17",
+    "scheduledMin": 584.2833333333333
+  },
+  "ab8590b5-6b37-4976-9970-c3ba416d513d": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "10:14:17",
+    "scheduledMin": 614.2833333333333
+  },
+  "7f0570cd-f240-4cf9-b855-4dd753cd24d4": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "09:15:00",
+    "scheduledMin": 555
+  },
+  "0b5e8505-e3b2-4b25-9d68-eb84ccedfd9a": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "11:45:00",
+    "scheduledMin": 705
+  },
+  "baa5da6c-ba9c-4bd4-887f-eed888b492d5": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "12:15:00",
+    "scheduledMin": 735
+  },
+  "2728f47c-4cd8-47e8-b5f2-c4ef82ecb6dc": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "12:45:00",
+    "scheduledMin": 765
+  },
+  "ee1c2fcd-2423-4bd2-80cd-855e187bce86": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "13:15:00",
+    "scheduledMin": 795
+  },
+  "a9e1c6d2-4a74-4926-ae3b-dcc4200b656e": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "13:45:00",
+    "scheduledMin": 825
+  },
+  "1e573892-1fad-4349-b35d-dba03dd4594d": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "14:15:00",
+    "scheduledMin": 855
+  },
+  "930b49ad-a43c-4440-8fd5-461aad3481c5": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "14:45:00",
+    "scheduledMin": 885
+  },
+  "7bd0b5e7-e63e-4315-9a60-4bc5afa82ea7": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "15:15:00",
+    "scheduledMin": 915
+  },
+  "2402a172-6519-4e86-96dd-4d876501c5fa": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "15:45:00",
+    "scheduledMin": 945
+  },
+  "c8395d4e-e024-4e28-bd16-73f10e170cdd": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "20:45:00",
+    "scheduledMin": 1245
+  },
+  "45839617-da05-40bf-b16a-850b1fda1729": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "19:00:00",
+    "scheduledMin": 1140
+  },
+  "9545249b-1ccc-4c2a-99c6-6a9c84344153": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "14:15:00",
+    "scheduledMin": 855
+  },
+  "48f10e10-df81-4429-9bab-ab5bf37cc290": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "15:15:00",
+    "scheduledMin": 915
+  },
+  "7b1a55a9-90f5-4240-af9e-e68b7edeacd2": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "09:14:17",
+    "scheduledMin": 554.2833333333333
+  },
+  "a4e12100-2630-415e-b489-ace6ebe9fc36": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "16:15:00",
+    "scheduledMin": 975
+  },
+  "59eed3d5-02f9-4953-a641-48fa4e0a2a87": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "17:15:00",
+    "scheduledMin": 1035
+  },
+  "eeda5e75-b739-4a3e-be0e-c9e4cdfc1da0": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "12:30:00",
+    "scheduledMin": 750
+  },
+  "6013eb51-88bb-4010-88b5-02f472f5e4a6": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "11:14:17",
+    "scheduledMin": 674.2833333333333
+  },
+  "8feca4e8-ff81-4df0-88b7-b21a3ae361a1": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "18:15:00",
+    "scheduledMin": 1095
+  },
+  "685415b8-ff8c-40ae-918d-b7d8e46297ee": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "18:45:00",
+    "scheduledMin": 1125
+  },
+  "52889b06-ee40-40b2-9ab6-907f8a75dcd5": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "13:14:17",
+    "scheduledMin": 794.2833333333333
+  },
+  "8a653bbf-5765-495a-98c9-a2c7a10a6ab9": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "14:14:17",
+    "scheduledMin": 854.2833333333333
+  },
+  "f3454038-7e93-46e0-b245-8006503a4647": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "06:17:03",
+    "scheduledMin": 377.05
+  },
+  "118b4487-513b-4c2f-9466-88b0f02d6804": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "06:47:03",
+    "scheduledMin": 407.05
+  },
+  "9b3c8b49-913c-41b4-aa26-b20ad6f818d9": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "07:17:03",
+    "scheduledMin": 437.05
+  },
+  "f0959585-bd88-43d4-a0bd-afb3db170d67": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "07:42:28",
+    "scheduledMin": 462.46666666666664
+  },
+  "d1e561dd-8865-4969-b4a4-eb5e3ea5e190": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "08:14:17",
+    "scheduledMin": 494.28333333333336
+  },
+  "4683aedc-4fa8-4484-876f-9120ccb7d05e": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "08:44:17",
+    "scheduledMin": 524.2833333333333
+  },
+  "5dbbd454-5f6b-455d-8bbe-a69324372b46": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "09:14:17",
+    "scheduledMin": 554.2833333333333
+  },
+  "f2dcfa8e-5443-4748-bfca-e683b78860eb": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "09:44:17",
+    "scheduledMin": 584.2833333333333
+  },
+  "ea8ae06b-edaf-4642-94a7-7ce86f54e9ad": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "10:14:17",
+    "scheduledMin": 614.2833333333333
+  },
+  "6c0d265e-8332-4de3-af2b-584b9487f0b2": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "14:45:00",
+    "scheduledMin": 885
+  },
+  "1e2c707a-2515-47d4-9460-19474439224c": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "15:15:00",
+    "scheduledMin": 915
+  },
+  "971f15e3-5dc4-4f36-91cf-a1059daac9e7": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "15:45:00",
+    "scheduledMin": 945
+  },
+  "003a3ac1-864c-4cea-b494-876e7e708bc3": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "16:15:00",
+    "scheduledMin": 975
+  },
+  "31352fb7-2c00-49b3-8882-6237eac99596": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "10:45:00",
+    "scheduledMin": 645
+  },
+  "aa1a2fc8-14b1-4213-8d44-7a1adbe8c553": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "15:14:17",
+    "scheduledMin": 914.2833333333333
+  },
+  "903378fe-ba18-4c22-a4aa-2280c11441cd": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "15:44:17",
+    "scheduledMin": 944.2833333333333
+  },
+  "a2c44ddc-db19-403c-a0f8-edb16fccca02": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "16:14:17",
+    "scheduledMin": 974.2833333333333
+  },
+  "3ab24fae-2262-45b7-8288-c1f1a4e3e39e": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "16:44:17",
+    "scheduledMin": 1004.2833333333333
+  },
+  "7b6d94b4-2e60-4726-bae2-9d1841d04256": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "06:00:00",
+    "scheduledMin": 360
+  },
+  "231a8e99-3283-452a-8d4b-b5dbc4022a7d": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "11:15:00",
+    "scheduledMin": 675
+  },
+  "83dbb433-4b30-4cc0-82ba-5c9e1bd2002c": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "11:45:00",
+    "scheduledMin": 705
+  },
+  "4df887dd-15e1-4701-b315-8dc9de89105f": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "12:15:00",
+    "scheduledMin": 735
+  },
+  "73923b51-4e69-4f6f-bd99-0ac70cbe1fda": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "12:45:00",
+    "scheduledMin": 765
+  },
+  "b2396d9b-5103-4d48-a688-a9f21a634f82": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "13:15:00",
+    "scheduledMin": 795
+  },
+  "109d08cf-4143-4817-bd96-ff3833f6ee6d": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "19:34:23",
+    "scheduledMin": 1174.3833333333334
+  },
+  "bc898de6-43b1-4dba-a072-9a2d447ade0f": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "13:29:17",
+    "scheduledMin": 809.2833333333333
+  },
+  "69c6de73-e3db-41c0-9804-d1d25c9bad6f": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "17:25:37",
+    "scheduledMin": 1045.6166666666666
+  },
+  "a4aeb6f3-63e9-4901-9dd8-14d29e12ad44": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "15:30:13",
+    "scheduledMin": 930.2166666666667
+  },
+  "6d390d66-9000-411e-82ae-e6b722c6691a": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "11:44:17",
+    "scheduledMin": 704.2833333333333
+  },
+  "fa5576d3-f6db-4d44-aa52-353f81bcdfa8": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "12:14:17",
+    "scheduledMin": 734.2833333333333
+  },
+  "5ffd44a0-49f4-4d8a-9f4b-114271289765": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "12:44:17",
+    "scheduledMin": 764.2833333333333
+  },
+  "81282db1-d662-4535-8d8d-a89f37cb730a": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "06:45:00",
+    "scheduledMin": 405
+  },
+  "6dd03462-52c3-41be-a621-87fd58b38ce0": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "07:15:00",
+    "scheduledMin": 435
+  },
+  "397fc413-4e56-428d-b3ca-368cd5cde67e": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "08:15:00",
+    "scheduledMin": 495
+  },
+  "dbce1770-b4c2-4aae-bc8e-b59f671da471": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "06:45:00",
+    "scheduledMin": 405
+  },
+  "0844d91c-2a85-475a-ba3a-a96f2e3cb876": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "07:15:00",
+    "scheduledMin": 435
+  },
+  "6769b050-cdc6-4bd7-afc3-1e06f0c63815": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "07:45:00",
+    "scheduledMin": 465
+  },
+  "5bf31574-9a5f-4797-962d-e6fb047ff66f": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "11:59:17",
+    "scheduledMin": 719.2833333333333
+  },
+  "0e7262b0-8bd2-4769-b849-b7c5349d8672": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "13:59:17",
+    "scheduledMin": 839.2833333333333
+  },
+  "d8fdea6b-7cf4-4601-9eb5-73f61e880939": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "16:00:13",
+    "scheduledMin": 960.2166666666667
+  },
+  "ec682416-17f8-4937-82e2-113f39e2f182": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "06:17:03",
+    "scheduledMin": 377.05
+  },
+  "b6ccf260-929f-4a99-b639-3da84a68ee8a": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "07:42:28",
+    "scheduledMin": 462.46666666666664
+  },
+  "42458ca7-b45d-4cf5-9695-dcc448a5ee95": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "17:59:17",
+    "scheduledMin": 1079.2833333333333
+  },
+  "eb07c12f-5457-45e4-842e-df3c78cbb287": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "08:14:17",
+    "scheduledMin": 494.28333333333336
+  },
+  "92991c25-7218-4673-8fe6-46e7aed58ebc": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "21:34:23",
+    "scheduledMin": 1294.3833333333334
+  },
+  "c7162f0c-c4ac-477a-b73f-8a643aee464c": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "10:14:17",
+    "scheduledMin": 614.2833333333333
+  },
+  "4706aaa4-a330-4cad-8205-38795464a0f6": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "08:15:00",
+    "scheduledMin": 495
+  },
+  "9aee4eb1-3e6c-41bd-8e3c-96c5f577d7ad": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "10:44:17",
+    "scheduledMin": 644.2833333333333
+  },
+  "cda0a498-e35d-4494-9e3c-6d75d93c7bc8": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "11:14:17",
+    "scheduledMin": 674.2833333333333
+  },
+  "9e8ce755-c7b4-4f2e-9a90-b4dcb169bce7": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "08:45:00",
+    "scheduledMin": 525
+  },
+  "ff894877-5aec-4c11-8f61-2a198149bc7c": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "11:14:17",
+    "scheduledMin": 674.2833333333333
+  },
+  "9bdb7cab-a6c2-4d35-a928-c09a631bdb0f": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "11:44:17",
+    "scheduledMin": 704.2833333333333
+  },
+  "395868bb-193c-4ba3-adcb-56d7578d3657": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "12:14:17",
+    "scheduledMin": 734.2833333333333
+  },
+  "8c397d06-cb8b-47f6-9dec-3f8e63a4695f": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "17:44:17",
+    "scheduledMin": 1064.2833333333333
+  },
+  "ca6e6405-7761-4d74-bde1-e6f3b81be9da": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "19:34:17",
+    "scheduledMin": 1174.2833333333333
+  },
+  "2b609f80-bf81-484a-9b14-9f31d2d9b309": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "20:34:17",
+    "scheduledMin": 1234.2833333333333
+  },
+  "14266383-4c6a-4f15-813a-34e21e0598f1": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "21:34:17",
+    "scheduledMin": 1294.2833333333333
+  },
+  "f004c369-e604-4d8f-a35f-335dedd06c75": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "06:15:00",
+    "scheduledMin": 375
+  },
+  "44d33472-68c9-417b-ab41-fd81739da14e": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "06:30:00",
+    "scheduledMin": 390
+  },
+  "83776c35-d6d1-440a-99fc-bb9ba303dd7d": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "10:45:00",
+    "scheduledMin": 645
+  },
+  "71a20b4a-715c-4f1c-8878-003f539b1779": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "09:45:00",
+    "scheduledMin": 585
+  },
+  "79d04de5-5830-4c76-b13d-6cc0a4359abd": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "18:44:17",
+    "scheduledMin": 1124.2833333333333
+  },
+  "69496854-b78a-4c28-aa65-1fdb85aebe86": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "07:30:00",
+    "scheduledMin": 450
+  },
+  "6dfbc55f-ed92-4b1f-ba11-dc56705afba1": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "17:14:17",
+    "scheduledMin": 1034.2833333333333
+  },
+  "27773a4f-5ea4-4d1b-8808-ca2ecb05575e": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "10:15:00",
+    "scheduledMin": 615
+  },
+  "4738839e-43c8-4aca-a6a6-3c576fb5629c": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "18:14:17",
+    "scheduledMin": 1094.2833333333333
+  },
+  "d172cfde-2ad9-4b17-8b44-dd3e2b485b4e": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "06:45:00",
+    "scheduledMin": 405
+  },
+  "9be8fc68-0963-4a84-9085-bc4528e1eaa7": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "07:00:00",
+    "scheduledMin": 420
+  },
+  "f6d3ef2e-41f1-4af2-9ed3-35089cb52d74": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "11:15:00",
+    "scheduledMin": 675
+  },
+  "2f06c384-2a39-48b7-975b-26d3a052decd": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "18:44:17",
+    "scheduledMin": 1124.2833333333333
+  },
+  "a2b2989d-8fa3-4039-8937-abc5cf4681dd": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "17:44:17",
+    "scheduledMin": 1064.2833333333333
+  },
+  "044129f3-123f-4e6b-82df-b9e8f79e2fc3": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "07:59:17",
+    "scheduledMin": 479.28333333333336
+  },
+  "3a50ad26-2729-426f-924b-41b57f033f7f": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "09:59:17",
+    "scheduledMin": 599.2833333333333
+  },
+  "4cb238f7-798d-45e9-a924-3f1f4a2498a2": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "07:15:00",
+    "scheduledMin": 435
+  },
+  "d05788a5-c0b4-46ae-bbf5-424ca4ddc27c": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "13:45:00",
+    "scheduledMin": 825
+  },
+  "381d2e39-8fdf-4c21-af67-95496c00d4e2": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "08:00:00",
+    "scheduledMin": 480
+  },
+  "84d2188d-31e8-4fd4-a560-5ab3ee2a4664": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "08:30:00",
+    "scheduledMin": 510
+  },
+  "ab6fc1f7-9f2e-43c1-b66d-4ca4a493db51": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "09:00:00",
+    "scheduledMin": 540
+  },
+  "3bbfb1b2-2e4c-47e7-86d8-03f501aa7a60": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "10:00:00",
+    "scheduledMin": 600
+  },
+  "35a67f34-8c90-4b4a-ab0c-407efce6da8b": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "09:30:00",
+    "scheduledMin": 570
+  },
+  "a052ceb1-7009-4c13-868b-0032f4bf3689": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "14:45:00",
+    "scheduledMin": 885
+  },
+  "9ed230c9-ad89-49f2-a562-4413659c1d6d": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "15:45:00",
+    "scheduledMin": 945
+  },
+  "27623477-8c1c-43d7-b642-966f99c25778": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "07:45:00",
+    "scheduledMin": 465
+  },
+  "0afe0472-f89d-4c71-8f40-df8bd890d12d": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "11:00:00",
+    "scheduledMin": 660
+  },
+  "ae6b96aa-cd12-4bcc-9434-63ae30a96eac": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "14:15:00",
+    "scheduledMin": 855
+  },
+  "fd4ceafd-39b7-41ad-b6cf-94e2430d3552": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "16:45:00",
+    "scheduledMin": 1005
+  },
+  "1c7d75eb-9faf-4f1d-a1d8-4caee92d551c": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "09:44:17",
+    "scheduledMin": 584.2833333333333
+  },
+  "5ba24c39-247e-4b16-9da3-fce826a41c04": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "14:44:17",
+    "scheduledMin": 884.2833333333333
+  },
+  "4476c97a-2585-40ba-aeb0-1936616548e7": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "11:44:17",
+    "scheduledMin": 704.2833333333333
+  },
+  "730f8fd8-ba51-486f-9a1a-0d3fcaadcabc": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "13:44:17",
+    "scheduledMin": 824.2833333333333
+  },
+  "0d4c1581-8dcb-486f-9aa2-cdd21891baaf": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "15:45:13",
+    "scheduledMin": 945.2166666666667
+  },
+  "6d67a408-1494-43db-85bb-fe9c25655222": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "06:06:38",
+    "scheduledMin": 366.6333333333333
+  },
+  "5e7d4290-98f5-42a5-96e6-3a4d4746a877": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "20:34:23",
+    "scheduledMin": 1234.3833333333334
+  },
+  "9206e336-9bfc-49f2-984b-4780d50dd5bf": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "20:04:23",
+    "scheduledMin": 1204.3833333333334
+  },
+  "e580ca87-6f73-4b11-895e-eeb3b7096eda": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "08:45:00",
+    "scheduledMin": 525
+  },
+  "3cd1845f-7517-42c4-a51f-cc46dbd08819": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "08:14:17",
+    "scheduledMin": 494.28333333333336
+  },
+  "28cdc985-ddb4-467b-9ba5-c41f1c491def": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "06:45:00",
+    "scheduledMin": 405
+  },
+  "af798f14-d46c-4643-b0e0-d9db05b839bd": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "07:15:00",
+    "scheduledMin": 435
+  },
+  "0d09dbed-3b94-4bce-a3ba-bb95e821f219": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "07:45:00",
+    "scheduledMin": 465
+  },
+  "c5e7a2b9-2014-41fd-8717-7c205afcd019": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "08:15:00",
+    "scheduledMin": 495
+  },
+  "8cbaeb22-7389-496e-885c-f43c3acd1a3b": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "08:45:00",
+    "scheduledMin": 525
+  },
+  "3a67a594-ab3c-471a-a3b4-29971ed0bdf4": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "16:15:00",
+    "scheduledMin": 975
+  },
+  "7c090edf-abc4-4863-861e-60f65c8392cb": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "16:45:00",
+    "scheduledMin": 1005
+  },
+  "67500534-a11f-46d9-9b60-392c9a8eadac": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "13:30:00",
+    "scheduledMin": 810
+  },
+  "518944cc-3313-40d6-b64c-febfe5b96e9f": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "13:00:00",
+    "scheduledMin": 780
+  },
+  "e624e245-a84e-4830-be67-13e921c59260": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "10:45:00",
+    "scheduledMin": 645
+  },
+  "fb03945a-2ac1-488b-8cfe-b6c88e9f642a": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "11:45:00",
+    "scheduledMin": 705
+  },
+  "00fb2fc1-4012-4b54-b840-a42ad21da6af": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "14:00:00",
+    "scheduledMin": 840
+  },
+  "c2364944-3bf6-4dfd-b476-3ff64329e630": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "15:00:00",
+    "scheduledMin": 900
+  },
+  "b55f8a02-3c04-4890-a45e-c6c5e6d44599": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "16:00:00",
+    "scheduledMin": 960
+  },
+  "5c25e756-0cbe-40a0-a64f-6d1e60a4149c": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "17:00:00",
+    "scheduledMin": 1020
+  },
+  "489051d8-bfa4-452d-9c63-abedd00d7f76": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "08:44:17",
+    "scheduledMin": 524.2833333333333
+  },
+  "bac6e6ba-30c9-4ab7-9ba9-751f7dead4fd": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "12:15:00",
+    "scheduledMin": 735
+  },
+  "b9d13d9f-c034-4333-b506-3f76cad7dc60": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "10:44:17",
+    "scheduledMin": 644.2833333333333
+  },
+  "7f0bb28e-08b7-40d5-be94-d519331ddc3b": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "18:00:00",
+    "scheduledMin": 1080
+  },
+  "f4392616-763a-4863-9254-8b3c59b5fc4a": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "18:15:00",
+    "scheduledMin": 1095
+  },
+  "51fa829a-e1d7-4dc6-b52e-32bc7748d6d4": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "12:44:17",
+    "scheduledMin": 764.2833333333333
+  },
+  "9819a6d5-fdcc-46ce-b2dc-108ba850a43a": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "21:15:00",
+    "scheduledMin": 1275
+  },
+  "a8593f53-e90f-4f8c-a4f1-9a627aabcb0d": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "19:15:00",
+    "scheduledMin": 1155
+  },
+  "8c4c6e8b-9755-406c-a2b8-fd34d77b3418": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "14:30:00",
+    "scheduledMin": 870
+  },
+  "3987e5b7-8b32-4d65-9e97-ec668749a390": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "15:30:00",
+    "scheduledMin": 930
+  },
+  "2bf6adb7-5d60-4daa-9254-9ac687227b4a": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "09:44:17",
+    "scheduledMin": 584.2833333333333
+  },
+  "4449f988-556e-47cb-8049-9309da71f087": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "16:30:00",
+    "scheduledMin": 990
+  },
+  "834ec288-1461-4fc3-90df-a1a59d9e76ed": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "12:45:00",
+    "scheduledMin": 765
+  },
+  "886f8ce1-9518-4ec3-bf5b-272f195377d8": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "17:30:00",
+    "scheduledMin": 1050
+  },
+  "641949d5-c157-4460-867c-4b19996fd7e8": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "11:44:17",
+    "scheduledMin": 704.2833333333333
+  },
+  "95dcedbf-997c-4915-ac32-dee64ecc7504": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "06:17:03",
+    "scheduledMin": 377.05
+  },
+  "81e0b8e0-b814-4961-b50a-7dfe2e523236": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "18:30:00",
+    "scheduledMin": 1110
+  },
+  "5a0b4bd0-e5ee-4700-b292-0b90c2cd0d68": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "13:44:17",
+    "scheduledMin": 824.2833333333333
+  },
+  "13f251ea-506b-4c59-bc28-0f7d3a633808": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "13:45:00",
+    "scheduledMin": 825
+  },
+  "44ed6ec5-f0c4-406a-89e2-44c43cf19b34": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "22:15:00",
+    "scheduledMin": 1335
+  },
+  "a4a8fd13-1665-4ce0-9b17-8c768c8b1a3d": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "19:45:00",
+    "scheduledMin": 1185
+  },
+  "4de869d6-f361-4d8e-a651-c960aff22ac7": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "14:45:00",
+    "scheduledMin": 885
+  },
+  "5cbe5de9-7ad3-47f3-bce1-78a8e55526f2": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "10:14:17",
+    "scheduledMin": 614.2833333333333
+  },
+  "86cba879-96b8-48e8-a027-888139ab4fcd": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "15:45:00",
+    "scheduledMin": 945
+  },
+  "c509b5fd-dba6-42f0-b38e-38825155efac": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "17:45:00",
+    "scheduledMin": 1065
+  },
+  "06a81868-8f23-4586-a8d1-9d37bdc96cdd": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "16:45:00",
+    "scheduledMin": 1005
+  },
+  "ada24f97-c764-4d06-9b32-2764a094c105": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "05:51:38",
+    "scheduledMin": 351.6333333333333
+  },
+  "0793d64a-e3ee-4089-a78d-99a64460a74c": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "12:14:17",
+    "scheduledMin": 734.2833333333333
+  },
+  "e6ca8e52-c14a-4bce-8084-3f18eb1fb918": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "06:47:03",
+    "scheduledMin": 407.05
+  },
+  "d2b55abb-4f0f-45d0-ac5c-64e3fa29dfc3": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "18:45:00",
+    "scheduledMin": 1125
+  },
+  "3e187680-ccde-43ac-b73c-27eef7568518": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "09:15:00",
+    "scheduledMin": 555
+  },
+  "386c81f2-e230-4f1e-a0c3-b6ccae6fb425": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "13:14:17",
+    "scheduledMin": 794.2833333333333
+  },
+  "71f6b73c-9598-4e0c-b7d2-59fce7428bb6": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "13:44:17",
+    "scheduledMin": 824.2833333333333
+  },
+  "877711df-e73a-4887-b151-051407e55501": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "14:14:17",
+    "scheduledMin": 854.2833333333333
+  },
+  "8f3087aa-1a2e-479f-bb8b-bd0eb7d7cb6d": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "14:44:17",
+    "scheduledMin": 884.2833333333333
+  },
+  "49472f6d-2f1e-4f43-875f-e174df2782dc": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "20:34:17",
+    "scheduledMin": 1234.2833333333333
+  },
+  "a9831a8b-f523-4d84-a4d3-6da4232b080a": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "10:44:17",
+    "scheduledMin": 644.2833333333333
+  },
+  "e7de9523-6cb7-456d-b1fb-86815e50ca80": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "13:44:17",
+    "scheduledMin": 824.2833333333333
+  },
+  "feae9702-b934-4b33-ab53-c652fecb308c": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "07:42:28",
+    "scheduledMin": 462.46666666666664
+  },
+  "4075cc54-56fc-4bb8-8d59-380dbcccd460": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "18:15:00",
+    "scheduledMin": 1095
+  },
+  "c43d1188-ec75-4373-84b7-4e251876b734": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "12:14:17",
+    "scheduledMin": 734.2833333333333
+  },
+  "9286bb0e-c309-41dd-9bd5-d9a84fc178bd": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "14:14:17",
+    "scheduledMin": 854.2833333333333
+  },
+  "0f161cf1-6bb2-4b75-ba46-ef5129efb312": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "16:10:37",
+    "scheduledMin": 970.6166666666667
+  },
+  "97cc2478-9628-4fd5-a371-c8102e84fbca": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "06:32:03",
+    "scheduledMin": 392.05
+  },
+  "5e5af6e4-0126-42fa-9780-b05a86b6713f": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "08:14:17",
+    "scheduledMin": 494.28333333333336
+  },
+  "c3f94e23-40fa-489d-b280-44b9a886a303": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "08:29:17",
+    "scheduledMin": 509.28333333333336
+  },
+  "98f2675e-7a43-4253-9bc9-693ae3bc74c7": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "22:38:55",
+    "scheduledMin": 1358.9166666666667
+  },
+  "1cae1205-e4fc-413a-abe3-4680d2864ec6": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "18:14:17",
+    "scheduledMin": 1094.2833333333333
+  },
+  "98c48c33-7a13-41fd-bbea-9724ec9c50e4": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "10:29:17",
+    "scheduledMin": 629.2833333333333
+  },
+  "600c4740-df6b-4b7e-b03a-17e0b68559b6": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "16:14:17",
+    "scheduledMin": 974.2833333333333
+  },
+  "f65ede89-d93c-4851-9a3a-067ad4b65a73": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "12:44:17",
+    "scheduledMin": 764.2833333333333
+  },
+  "f76b4935-8d56-4a00-a4c5-1ca7dc07f920": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "13:14:17",
+    "scheduledMin": 794.2833333333333
+  },
+  "c5e7ef83-7c25-49f2-bce0-21b9a67e3106": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "18:45:00",
+    "scheduledMin": 1125
+  },
+  "5e18e19e-b6a6-4383-90d8-ecaf60600fc6": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "19:15:00",
+    "scheduledMin": 1155
+  },
+  "0cf9d4c9-9808-45be-815c-f40ac8ff98d0": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "20:15:00",
+    "scheduledMin": 1215
+  },
+  "81309c30-aea5-4f8d-bb7e-43697051662b": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "21:15:00",
+    "scheduledMin": 1275
+  },
+  "aa274165-18db-4df7-bf3b-120df5cf7be6": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "22:15:00",
+    "scheduledMin": 1335
+  },
+  "e968d417-7136-4311-be6c-f5bd7436e765": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "06:17:03",
+    "scheduledMin": 377.05
+  },
+  "3082b1b9-1b53-4600-adfd-bc30e03ed447": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "06:47:03",
+    "scheduledMin": 407.05
+  },
+  "df2b8a93-ed48-4aff-9c04-e8c150db724a": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "07:17:03",
+    "scheduledMin": 437.05
+  },
+  "887ab9ea-0554-4950-ad83-af5cecf0dfc7": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "21:34:17",
+    "scheduledMin": 1294.2833333333333
+  },
+  "f4852dab-c3c1-4a2e-afb6-cfba3fba026f": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "22:37:06",
+    "scheduledMin": 1357.1
+  },
+  "e0df81de-6b6d-4246-b980-1d1924805c0c": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "15:14:17",
+    "scheduledMin": 914.2833333333333
+  },
+  "5c598ea8-9eef-4e73-8325-f21ebd046a11": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "19:34:17",
+    "scheduledMin": 1174.2833333333333
+  },
+  "3acaf2db-5421-4e39-bd43-c82c2e49354e": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "16:45:00",
+    "scheduledMin": 1005
+  },
+  "78eec13b-e4bc-4b1f-93c3-993dab275a1c": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "17:15:00",
+    "scheduledMin": 1035
+  },
+  "f4294af8-6df4-4a10-a277-14f7da08b687": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "17:45:00",
+    "scheduledMin": 1065
+  },
+  "880cbee6-445f-4d75-8921-a6cd775ac582": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "18:15:00",
+    "scheduledMin": 1095
+  },
+  "c5c93187-53c8-4bbb-8566-b27fb3390bc4": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "18:45:00",
+    "scheduledMin": 1125
+  },
+  "fe6f9b83-0e62-41ad-9a1f-42fe323103b2": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "19:15:00",
+    "scheduledMin": 1155
+  },
+  "7acbf4f2-efb5-4453-85f9-dce27699cd33": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "20:15:00",
+    "scheduledMin": 1215
+  },
+  "1390768e-d98d-418b-bfb0-7cb7bef8fbcf": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "21:15:00",
+    "scheduledMin": 1275
+  },
+  "84261dee-915c-4f5d-a70b-1c046318e93a": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "22:15:00",
+    "scheduledMin": 1335
+  },
+  "a32dc5be-011a-4a96-828d-2beeb7eb6f65": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "23:15:00",
+    "scheduledMin": 1395
+  },
+  "fec26d1a-6a6e-49b4-9266-908e9f4d710d": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "17:45:00",
+    "scheduledMin": 1065
+  },
+  "b9950074-32c7-40d7-9fb6-0f326e6cd7ef": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "12:59:17",
+    "scheduledMin": 779.2833333333333
+  },
+  "c95973cb-b5f4-4c99-994b-a8c88a7f7059": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "16:55:37",
+    "scheduledMin": 1015.6166666666667
+  },
+  "79239301-e4f1-44b7-b6ce-f690bc238b65": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "15:00:13",
+    "scheduledMin": 900.2166666666667
+  },
+  "67ec8fb7-a3f4-4fad-a8d4-b0f1392cbfaa": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "07:17:03",
+    "scheduledMin": 437.05
+  },
+  "07d9bcce-b05e-48c1-879d-a4b8204efc80": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "09:14:17",
+    "scheduledMin": 554.2833333333333
+  },
+  "1d0ffd0f-96c0-4dd4-a7a1-8ea5bcd64cd2": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "11:14:17",
+    "scheduledMin": 674.2833333333333
+  },
+  "6272e9bb-ab95-45fb-bece-10315c537240": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "17:44:17",
+    "scheduledMin": 1064.2833333333333
+  },
+  "d465dbba-41ab-4367-a7cf-2e20f9e1eb75": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "19:04:23",
+    "scheduledMin": 1144.3833333333334
+  },
+  "bc39aca4-4391-42e8-9492-411f21a50da8": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "10:30:00",
+    "scheduledMin": 630
+  },
+  "cca0acd1-54a4-438a-a028-272ef1e3b337": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "08:15:00",
+    "scheduledMin": 495
+  },
+  "a06e80cf-f984-4f46-bf7d-0d8f9ef1f303": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "11:30:00",
+    "scheduledMin": 690
+  },
+  "79abf02b-8cae-466f-b9fd-ad7125fc2935": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "08:45:00",
+    "scheduledMin": 525
+  },
+  "773221ac-2ffb-4db6-be51-44aff7abce8f": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "09:15:00",
+    "scheduledMin": 555
+  },
+  "1e24ced5-1e90-42b8-8568-af830648f180": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "10:15:00",
+    "scheduledMin": 615
+  },
+  "df98802d-ac9e-4bbd-b840-d792eda2cca3": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "09:45:00",
+    "scheduledMin": 585
+  },
+  "d439af45-38c0-4e27-97bf-b02a44c3b4bb": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "15:15:00",
+    "scheduledMin": 915
+  },
+  "39448362-88f2-47b8-a388-5dcf971c3db6": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "12:00:00",
+    "scheduledMin": 720
+  },
+  "f45d8ef9-285f-4a44-a5bf-51d286658290": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "16:15:00",
+    "scheduledMin": 975
+  },
+  "d39ee169-913f-48df-b227-97c198f99678": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "11:15:00",
+    "scheduledMin": 675
+  },
+  "24cd7f4a-e209-410a-9034-1ea6e2b50b3d": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "17:45:00",
+    "scheduledMin": 1065
+  },
+  "e238815e-fca3-4894-880f-7322b8814247": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "17:15:00",
+    "scheduledMin": 1035
+  },
+  "8fed1c8b-2db3-451f-ae02-283011382f50": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "07:17:03",
+    "scheduledMin": 437.05
+  },
+  "7b6a835a-3a22-4551-8913-c1fea09c4f38": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "07:45:00",
+    "scheduledMin": 465
+  },
+  "5f5f57c6-1440-4b18-9ee2-3709decffaf1": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "10:15:00",
+    "scheduledMin": 615
+  },
+  "94034a1b-01a6-41cb-a2b7-df7e73bfd45c": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "09:15:00",
+    "scheduledMin": 555
+  },
+  "dfbadc65-8d16-4cf9-bff2-ae05c0d52286": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "13:14:17",
+    "scheduledMin": 794.2833333333333
+  },
+  "436629f5-3962-4c52-84c5-cf5760e4feaa": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "17:10:37",
+    "scheduledMin": 1030.6166666666666
+  },
+  "ac049217-8c49-4559-a523-7442ba1e1a17": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "15:15:13",
+    "scheduledMin": 915.2166666666667
+  },
+  "89b4ca17-db6d-4d58-9fe3-5fa9d771bcd7": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "07:32:03",
+    "scheduledMin": 452.05
+  },
+  "6972c5ba-d93b-4963-b229-5de859f8651c": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "09:29:17",
+    "scheduledMin": 569.2833333333333
+  },
+  "3e94f2d8-66f1-4088-9fb1-57778381f97e": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "18:14:17",
+    "scheduledMin": 1094.2833333333333
+  },
+  "dded27ea-cb2c-463c-832b-dea53b92a3c8": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "11:29:17",
+    "scheduledMin": 689.2833333333333
+  },
+  "5bf27a21-957e-4f7c-8a5f-5492c6aa8736": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "14:14:17",
+    "scheduledMin": 854.2833333333333
+  },
+  "df382a25-60b1-46aa-a318-241ebd75d216": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "14:44:17",
+    "scheduledMin": 884.2833333333333
+  },
+  "8f3eff43-5e42-4b31-980e-de5a59b8281c": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "15:14:17",
+    "scheduledMin": 914.2833333333333
+  },
+  "0f39be50-7a1c-4085-9dc9-abb4ca9ba472": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "15:44:17",
+    "scheduledMin": 944.2833333333333
+  },
+  "00c21182-6283-4f42-8ca3-4e1b51d28f28": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "16:14:17",
+    "scheduledMin": 974.2833333333333
+  },
+  "fba14267-486f-45a7-8e2c-6dc96dd6623b": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "16:44:17",
+    "scheduledMin": 1004.2833333333333
+  },
+  "a1ac50bb-04c6-403f-a43c-1ae584d84d2a": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "17:14:17",
+    "scheduledMin": 1034.2833333333333
+  },
+  "d1244f17-34ed-4e31-bc30-3931e3b7397c": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "17:44:17",
+    "scheduledMin": 1064.2833333333333
+  },
+  "097ecad0-33d7-4af2-8eb0-e95c94c5a4bd": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "18:14:17",
+    "scheduledMin": 1094.2833333333333
+  },
+  "22454bb2-dc54-4b08-b0bc-2a11c0b90b15": {
+    "direction": 0,
+    "stopId": "1733",
+    "clock": "09:45:00",
+    "scheduledMin": 585
+  },
+  "31679ae8-2d4f-4e93-bc85-1d4ef9b19041": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "12:29:17",
+    "scheduledMin": 749.2833333333333
+  },
+  "9e8491ad-2b44-48f2-bc1d-9a8bd67c12d7": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "14:29:17",
+    "scheduledMin": 869.2833333333333
+  },
+  "97ffb276-9788-4f2f-afd4-c2482612e917": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "16:25:37",
+    "scheduledMin": 985.6166666666667
+  },
+  "e2a9c229-32eb-4811-9bfa-5d80ee204fe0": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "06:47:03",
+    "scheduledMin": 407.05
+  },
+  "7918e280-a71c-4c82-817f-f428fd2ae038": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "08:44:17",
+    "scheduledMin": 524.2833333333333
+  },
+  "cfce5cdb-e05b-4a80-9a39-6a406da76902": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "10:44:17",
+    "scheduledMin": 644.2833333333333
+  },
+  "63f2bc5b-4598-46be-9cc0-0bce99064a85": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "16:44:17",
+    "scheduledMin": 1004.2833333333333
+  },
+  "2ed2f62c-dc65-4cee-82fc-9e7d8e78851d": {
+    "direction": 1,
+    "stopId": "12228",
+    "clock": "18:29:17",
+    "scheduledMin": 1109.2833333333333
+  }
+}
