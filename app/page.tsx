@@ -6,11 +6,6 @@ type Direction = 'outbound' | 'return';
 type Arrival = {
   tripId: string;
   predictedTime: number;
-  primaryPredictedTime?: number;
-  mlPredictedTime?: number;
-  mlLowerTime?: number;
-  mlUpperTime?: number;
-  predictionSource?: 'live' | 'learned';
   delaySeconds: number | null;
   vehicleId: string | null;
   hasVehicle: boolean;
@@ -39,7 +34,7 @@ function minutesAway(timestamp?: number) {
 
 function addMinutes(timestamp: number, minutes: number) { return timestamp + minutes * 60; }
 function rangeLabel(start: number, end: number) { return clock(start) + '–' + clock(end); }
-function effectiveTime(arrival: Arrival) { return arrival.primaryPredictedTime ?? arrival.predictedTime; }
+function effectiveTime(arrival: Arrival) { return arrival.predictedTime; }
 
 function browseTrips(arrivals: Arrival[] | undefined) {
   const cutoff = Math.floor(Date.now() / 1000) - BROWSE_HISTORY_SECONDS;
@@ -62,16 +57,6 @@ function weatherWindow(samples: WeatherSample[], minTemperature: number, maxTemp
   if (rain || !temperatureOk) return { status: 'Drive recommended', className: 'weather-drive', detail: Math.round(minTemp) + '–' + Math.round(maxTemp) + '° feels like · ' + (rain ? 'rain on the route' : 'outside your temperature range') };
   if (precipitationProbability >= 20) return { status: 'Bike–Bus–Bike, watch forecast', className: 'weather-watch', detail: Math.round(minTemp) + '–' + Math.round(maxTemp) + '° feels like · ' + precipitationProbability + '% rain risk' };
   return { status: 'Bike–Bus–Bike looks good', className: 'weather-good', detail: Math.round(minTemp) + '–' + Math.round(maxTemp) + '° feels like · dry route' };
-}
-
-function predictionDetail(arrival: Arrival) {
-  if (arrival.predictionSource === 'learned' && arrival.mlLowerTime && arrival.mlUpperTime) {
-    return 'Learned estimate · likely ' + clock(arrival.mlLowerTime) + '–' + clock(arrival.mlUpperTime);
-  }
-  if (arrival.mlPredictedTime && Math.abs(arrival.mlPredictedTime - arrival.predictedTime) >= 60) {
-    return 'Live ' + clock(arrival.predictedTime) + ' · learned ' + clock(arrival.mlPredictedTime);
-  }
-  return 'Live feed · learned range shown when available';
 }
 
 function Leg({ mode, title, times, detail }: { mode: 'bike' | 'bus'; title: string; times: string; detail: string }) {
@@ -225,7 +210,7 @@ export default function Home() {
       <div className="big-time"><span>Leave by</span><strong>{plans.morning ? clock(plans.morning.leave) : '—'}</strong><span className="arrival-target">Arrive by <b>{plans.morning?.work ? clock(plans.morning.work) : '—'}</b></span></div>
       <div className="legs">
         <Leg mode="bike" title="Bike to Meredith" times={plans.morning ? rangeLabel(plans.morning.leave, plans.morning.station ?? plans.morning.leave) : '—'} detail="14 min · 8 min bus buffer" />
-        <Leg mode="bus" title={plans.morning ? 'Route 100 · ' + (minutesAway(plans.morning.busTime) ?? '—') + ' min' : 'Route 100'} times={plans.morning ? rangeLabel(plans.morning.busTime, plans.morning.rtc) : '—'} detail={plans.morning ? 'Meredith → RTC · ' + predictionDetail(plans.morning.bus) : 'Waiting for an upcoming prediction'} />
+        <Leg mode="bus" title={plans.morning ? 'Route 100 · ' + (minutesAway(plans.morning.busTime) ?? '—') + ' min' : 'Route 100'} times={plans.morning ? rangeLabel(plans.morning.busTime, plans.morning.rtc) : '—'} detail={plans.morning ? 'Meredith → RTC · Live feed' : 'Waiting for an upcoming prediction'} />
         <Leg mode="bike" title="Bike to work" times={plans.morning ? rangeLabel(plans.morning.rtc, plans.morning.work ?? plans.morning.rtc) : '—'} detail="5 min · RTC → destination" />
       </div>
       <div className={'weather-row ' + morningWeather.className}><span className="weather-symbol">☼</span><div className="weather-copy"><strong>{morningWeather.status}</strong><small>{morningWeather.detail}</small></div><span className="weather-window">AM</span></div>
@@ -245,7 +230,7 @@ export default function Home() {
       <div className="big-time"><span>Leave work by</span><strong>{plans.afternoon ? clock(plans.afternoon.leave) : '—'}</strong><span className="arrival-target">Arrive home by <b>{plans.afternoon?.home ? clock(plans.afternoon.home) : '—'}</b></span></div>
       <div className="legs">
         <Leg mode="bike" title="Bike to RTC" times={plans.afternoon ? rangeLabel(plans.afternoon.leave, plans.afternoon.rtc) : '—'} detail="5 min · 8 min bus buffer" />
-        <Leg mode="bus" title={plans.afternoon ? 'Route 100 · ' + (minutesAway(plans.afternoon.busTime) ?? '—') + ' min' : 'Route 100'} times={plans.afternoon ? rangeLabel(plans.afternoon.busTime, plans.afternoon.meredith ?? plans.afternoon.busTime) : '—'} detail={plans.afternoon ? 'RTC → Meredith · ' + predictionDetail(plans.afternoon.bus) : 'Waiting for an upcoming prediction'} />
+        <Leg mode="bus" title={plans.afternoon ? 'Route 100 · ' + (minutesAway(plans.afternoon.busTime) ?? '—') + ' min' : 'Route 100'} times={plans.afternoon ? rangeLabel(plans.afternoon.busTime, plans.afternoon.meredith ?? plans.afternoon.busTime) : '—'} detail={plans.afternoon ? 'RTC → Meredith · Live feed' : 'Waiting for an upcoming prediction'} />
         <Leg mode="bike" title="Bike home" times={plans.afternoon ? rangeLabel(plans.afternoon.meredith ?? plans.afternoon.rtc, plans.afternoon.home ?? plans.afternoon.rtc) : '—'} detail="14 min · Meredith → home" />
       </div>
       <div className={'weather-row ' + afternoonWeather.className}><span className="weather-symbol">☼</span><div className="weather-copy"><strong>{afternoonWeather.status}</strong><small>{afternoonWeather.detail}</small></div><span className="weather-window">PM</span></div>

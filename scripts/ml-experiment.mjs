@@ -15,11 +15,9 @@ const workDirectory = resolve(repoDirectory, 'work');
 const databasePath = process.env.ROUTE100_DB_PATH || resolve(workDirectory, 'route100-history.sqlite');
 const jsonPath = resolve(workDirectory, 'ml-experiment-latest.json');
 const markdownPath = resolve(workDirectory, 'ml-experiment-latest.md');
-const appDataDirectory = resolve(repoDirectory, 'app', 'data');
-const modelPath = resolve(appDataDirectory, 'ml-model.json');
-const schedulePath = resolve(appDataDirectory, 'route100-schedule.json');
+const modelPath = resolve(workDirectory, 'ml-model-latest.json');
+const schedulePath = resolve(workDirectory, 'route100-schedule-latest.json');
 mkdirSync(workDirectory, { recursive: true });
-mkdirSync(appDataDirectory, { recursive: true });
 
 function parseCsv(path) {
   const [header, ...lines] = readFileSync(path, 'utf8').trim().split(/\r?\n/);
