@@ -16,8 +16,8 @@ type WeatherData = { samples: Record<string, WeatherSample> };
 type Plan = { bus: Arrival; busTime: number; leave: number; station?: number; rtc: number; work?: number; meredith?: number; home?: number };
 
 const BUS_MINUTES = 24;
-const BUFFER_MINUTES = 8;
-const HOME_MEREDITH_MINUTES = 14;
+const BUFFER_MINUTES = 5;
+const HOME_MEREDITH_MINUTES = 15;
 const RTC_WORK_MINUTES = 5;
 const UPCOMING_BUFFER_SECONDS = 60;
 const BROWSE_HISTORY_SECONDS = 3 * 60 * 60;
@@ -209,7 +209,7 @@ export default function Home() {
       <TripPager index={outboundIndex} count={outboundTrips.length} onPrevious={() => setOutboundAt(outboundIndex - 1)} onNext={() => setOutboundAt(outboundIndex + 1)} />
       <div className="big-time"><span>Leave by</span><strong>{plans.morning ? clock(plans.morning.leave) : '—'}</strong><span className="arrival-target">Arrive by <b>{plans.morning?.work ? clock(plans.morning.work) : '—'}</b></span></div>
       <div className="legs">
-        <Leg mode="bike" title="Bike to Meredith" times={plans.morning ? rangeLabel(plans.morning.leave, plans.morning.station ?? plans.morning.leave) : '—'} detail="14 min · 8 min bus buffer" />
+        <Leg mode="bike" title="Bike to Meredith" times={plans.morning ? rangeLabel(plans.morning.leave, plans.morning.station ?? plans.morning.leave) : '—'} detail="15 min · 5 min bus buffer" />
         <Leg mode="bus" title={plans.morning ? 'Route 100 · ' + (minutesAway(plans.morning.busTime) ?? '—') + ' min' : 'Route 100'} times={plans.morning ? rangeLabel(plans.morning.busTime, plans.morning.rtc) : '—'} detail={plans.morning ? 'Meredith → RTC · Live feed' : 'Waiting for an upcoming prediction'} />
         <Leg mode="bike" title="Bike to work" times={plans.morning ? rangeLabel(plans.morning.rtc, plans.morning.work ?? plans.morning.rtc) : '—'} detail="5 min · RTC → destination" />
       </div>
@@ -229,9 +229,9 @@ export default function Home() {
       <TripPager index={returnIndex} count={returnTrips.length} onPrevious={() => setReturnAt(returnIndex - 1)} onNext={() => setReturnAt(returnIndex + 1)} />
       <div className="big-time"><span>Leave work by</span><strong>{plans.afternoon ? clock(plans.afternoon.leave) : '—'}</strong><span className="arrival-target">Arrive home by <b>{plans.afternoon?.home ? clock(plans.afternoon.home) : '—'}</b></span></div>
       <div className="legs">
-        <Leg mode="bike" title="Bike to RTC" times={plans.afternoon ? rangeLabel(plans.afternoon.leave, plans.afternoon.rtc) : '—'} detail="5 min · 8 min bus buffer" />
+        <Leg mode="bike" title="Bike to RTC" times={plans.afternoon ? rangeLabel(plans.afternoon.leave, plans.afternoon.rtc) : '—'} detail="5 min · 5 min bus buffer" />
         <Leg mode="bus" title={plans.afternoon ? 'Route 100 · ' + (minutesAway(plans.afternoon.busTime) ?? '—') + ' min' : 'Route 100'} times={plans.afternoon ? rangeLabel(plans.afternoon.busTime, plans.afternoon.meredith ?? plans.afternoon.busTime) : '—'} detail={plans.afternoon ? 'RTC → Meredith · Live feed' : 'Waiting for an upcoming prediction'} />
-        <Leg mode="bike" title="Bike home" times={plans.afternoon ? rangeLabel(plans.afternoon.meredith ?? plans.afternoon.rtc, plans.afternoon.home ?? plans.afternoon.rtc) : '—'} detail="14 min · Meredith → home" />
+        <Leg mode="bike" title="Bike home" times={plans.afternoon ? rangeLabel(plans.afternoon.meredith ?? plans.afternoon.rtc, plans.afternoon.home ?? plans.afternoon.rtc) : '—'} detail="15 min · Meredith → home" />
       </div>
       <div className={'weather-row ' + afternoonWeather.className}><span className="weather-symbol">☼</span><div className="weather-copy"><strong>{afternoonWeather.status}</strong><small>{afternoonWeather.detail}</small></div><span className="weather-window">PM</span></div>
     </section>
